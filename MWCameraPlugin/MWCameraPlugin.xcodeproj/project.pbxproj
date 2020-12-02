@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		181326FD86A211AAA0E0FDBA /* Pods_MWCamera_MWCameraPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D4D0FB31FC297041608D6F /* Pods_MWCamera_MWCameraPlugin.framework */; };
 		52B3F98B6A5EE208D5E380CA /* Pods_MWCameraPluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */; };
+		B18047602577AC64001EF194 /* MWQRCodeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B180475F2577AC64001EF194 /* MWQRCodeStep.swift */; };
+		B18047642577AC71001EF194 /* MWQRCodeStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18047632577AC71001EF194 /* MWQRCodeStepViewController.swift */; };
 		B18A496E2577AA4F002F3FD4 /* MWCameraPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18A49642577AA4E002F3FD4 /* MWCameraPlugin.framework */; };
 		B18A49732577AA4F002F3FD4 /* MWCameraPluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A49722577AA4F002F3FD4 /* MWCameraPluginTests.swift */; };
 		B18A49752577AA4F002F3FD4 /* MWCameraPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = B18A49672577AA4E002F3FD4 /* MWCameraPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +31,8 @@
 		12AD656C79FE984C1E211D32 /* Pods-MWCamera-MWCameraPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera-MWCameraPlugin.release.xcconfig"; path = "Target Support Files/Pods-MWCamera-MWCameraPlugin/Pods-MWCamera-MWCameraPlugin.release.xcconfig"; sourceTree = "<group>"; };
 		52CA5BBDCCC2599F88C6671B /* Pods-MWCamera-MWCameraPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera-MWCameraPlugin.debug.xcconfig"; path = "Target Support Files/Pods-MWCamera-MWCameraPlugin/Pods-MWCamera-MWCameraPlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCameraPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B180475F2577AC64001EF194 /* MWQRCodeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWQRCodeStep.swift; sourceTree = "<group>"; };
+		B18047632577AC71001EF194 /* MWQRCodeStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWQRCodeStepViewController.swift; sourceTree = "<group>"; };
 		B18A49642577AA4E002F3FD4 /* MWCameraPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MWCameraPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18A49672577AA4E002F3FD4 /* MWCameraPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWCameraPlugin.h; sourceTree = "<group>"; };
 		B18A49682577AA4E002F3FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B180475E2577AC02001EF194 /* QR Code Step */ = {
+			isa = PBXGroup;
+			children = (
+				B180475F2577AC64001EF194 /* MWQRCodeStep.swift */,
+				B18047632577AC71001EF194 /* MWQRCodeStepViewController.swift */,
+			);
+			path = "QR Code Step";
+			sourceTree = "<group>";
+		};
 		B18A495A2577AA4E002F3FD4 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 		B18A49662577AA4E002F3FD4 /* MWCameraPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				B180475E2577AC02001EF194 /* QR Code Step */,
 				B18A49672577AA4E002F3FD4 /* MWCameraPlugin.h */,
 				B18A49682577AA4E002F3FD4 /* Info.plist */,
 			);
@@ -182,6 +196,7 @@
 				TargetAttributes = {
 					B18A49632577AA4E002F3FD4 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					B18A496C2577AA4F002F3FD4 = {
 						CreatedOnToolsVersion = 12.2;
@@ -276,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18047642577AC71001EF194 /* MWQRCodeStepViewController.swift in Sources */,
+				B18047602577AC64001EF194 /* MWQRCodeStep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52CA5BBDCCC2599F88C6671B /* Pods-MWCamera-MWCameraPlugin.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BQHMJ2C6RL;
@@ -442,6 +460,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -451,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12AD656C79FE984C1E211D32 /* Pods-MWCamera-MWCameraPlugin.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BQHMJ2C6RL;
@@ -478,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5CBE9105CCAE5E898F650BE /* Pods-MWCameraPluginTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BQHMJ2C6RL;
 				INFOPLIST_FILE = MWCameraPluginTests/Info.plist;
@@ -497,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B9FF0B5127521888436108A /* Pods-MWCameraPluginTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BQHMJ2C6RL;
 				INFOPLIST_FILE = MWCameraPluginTests/Info.plist;
