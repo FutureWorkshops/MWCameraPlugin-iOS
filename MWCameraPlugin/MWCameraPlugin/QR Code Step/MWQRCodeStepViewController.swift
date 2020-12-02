@@ -8,32 +8,38 @@
 import UIKit
 import Foundation
 import AVFoundation
+import MobileWorkflowCore
 
-class MWQRCodeStepViewController: UIViewController {
+public class MWQRCodeStepViewController: ORKStepViewController {
     
     //MARK: Private properties
     private let captureSession = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer?
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
-    }
-    
     //MARK: Lifecycle
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
-        self.setupVideoCapture()
+        AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
+            DispatchQueue.main.async {
+                if granted {
+                    self?.setupVideoCapture()
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: "Camera permission is denied. Please, grant access to the camera in the Settings app.", preferredStyle: .alert)
+                    self?.present(alertController, animated: true)
+                }
+            }
+        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if !self.captureSession.isRunning {
             self.captureSession.startRunning()
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.captureSession.isRunning {
             self.captureSession.stopRunning()
@@ -58,7 +64,7 @@ class MWQRCodeStepViewController: UIViewController {
             }
             
             self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-            self.previewLayer!.frame = view.layer.bounds
+            self.previewLayer!.frame = self.view.layer.bounds
             self.previewLayer!.videoGravity = .resizeAspectFill
             self.view.layer.addSublayer(previewLayer!)
             
@@ -69,14 +75,23 @@ class MWQRCodeStepViewController: UIViewController {
     }
     
     private func found(code: String) {
-        print(code)
+        guard let step = self.step else {
+            self.show(NSError(domain: "MWCameraPlugin.qrCode", code: 2, userInfo: [NSLocalizedDescriptionKey:"QR Code found, but the step is missing. We can't continue."])) { [weak self] in
+                self?.goBackward()
+            }
+            return
+        }
+        let result = ORKResult(identifier: step.identifier)
+        assertionFailure("The result is not being saved!")
+        self.addResult(result)
+        self.goForward()
     }
 
 }
 
 //MARK: AVCaptureMetadataOutputObjectsDelegate
 extension MWQRCodeStepViewController: AVCaptureMetadataOutputObjectsDelegate {
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         self.captureSession.stopRunning()
         
         if let metadataObject = metadataObjects.first,
