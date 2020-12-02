@@ -16,7 +16,7 @@ public struct MWCameraPlugin: MobileWorkflowPlugin {
 
 public enum MWCameraStepType: String, MobileWorkflowStepType, CaseIterable {
     
-    case qrCode = "qrCode"
+    case qrCode = "io.mobileworkflow.qrcodescanner"
     
     public var typeName: String {
         return self.rawValue
