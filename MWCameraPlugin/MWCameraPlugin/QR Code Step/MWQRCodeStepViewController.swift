@@ -100,8 +100,9 @@ extension MWQRCodeStepViewController: AVCaptureMetadataOutputObjectsDelegate {
         
         if let metadataObject = metadataObjects.first,
            let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject,
-           let stringValue = readableObject.stringValue {
-            self.found(code: stringValue)
+           let code = readableObject.stringValue,
+           !code.isEmpty {
+            self.found(code: code)
         } else {
             self.captureSession.startRunning()
         }
