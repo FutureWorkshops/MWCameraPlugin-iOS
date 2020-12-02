@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46DF196E73E18F78A1EEF200 /* Pods_MWCamera_MWCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39F242EF3C0C610695414C1 /* Pods_MWCamera_MWCamera.framework */; };
+		7140564F933104A254F07319 /* Pods_MWCameraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614CAF440DB67E7781529CB5 /* Pods_MWCameraTests.framework */; };
 		B75028B51C5A3F94000EB3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75028B41C5A3F94000EB3CF /* AppDelegate.swift */; };
 		B75028B71C5A3F94000EB3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75028B61C5A3F94000EB3CF /* ViewController.swift */; };
 		B75028BA1C5A3F94000EB3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75028B81C5A3F94000EB3CF /* Main.storyboard */; };
 		B75028BC1C5A3F94000EB3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B75028BB1C5A3F94000EB3CF /* Assets.xcassets */; };
 		B75028BF1C5A3F94000EB3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75028BD1C5A3F94000EB3CF /* LaunchScreen.storyboard */; };
 		B75028CA1C5A3F94000EB3CF /* MWCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75028C91C5A3F94000EB3CF /* MWCameraTests.swift */; };
-		E5F4C1B1746F581EE9B10287 /* Pods_MWCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116908E02A361817603828C /* Pods_MWCamera.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +29,13 @@
 
 /* Begin PBXFileReference section */
 		135FCAF079ABE628BBC9B86E /* Pods-MWCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera.release.xcconfig"; path = "Target Support Files/Pods-MWCamera/Pods-MWCamera.release.xcconfig"; sourceTree = "<group>"; };
+		2F44F9B44C7934CDFEE9509C /* Pods-MWCamera-MWCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera-MWCamera.debug.xcconfig"; path = "Target Support Files/Pods-MWCamera-MWCamera/Pods-MWCamera-MWCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		47C5780F7877BB8A7631156D /* Pods-MWCamera-MWCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera-MWCamera.release.xcconfig"; path = "Target Support Files/Pods-MWCamera-MWCamera/Pods-MWCamera-MWCamera.release.xcconfig"; sourceTree = "<group>"; };
 		539BE261DFF04D799EDA4620 /* Pods-MWCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera.debug.xcconfig"; path = "Target Support Files/Pods-MWCamera/Pods-MWCamera.debug.xcconfig"; sourceTree = "<group>"; };
-		7116908E02A361817603828C /* Pods_MWCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		614CAF440DB67E7781529CB5 /* Pods_MWCameraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCameraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C0E9BB20BC315100255055 /* MWCamera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MWCamera.entitlements; sourceTree = "<group>"; };
+		9AEEC6BA5AB5C99169C37D4E /* Pods-MWCameraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCameraTests.debug.xcconfig"; path = "Target Support Files/Pods-MWCameraTests/Pods-MWCameraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B39F242EF3C0C610695414C1 /* Pods_MWCamera_MWCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCamera_MWCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75028B11C5A3F94000EB3CF /* MWCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75028B41C5A3F94000EB3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B75028B61C5A3F94000EB3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		B75028C91C5A3F94000EB3CF /* MWCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWCameraTests.swift; sourceTree = "<group>"; };
 		B75028CB1C5A3F94000EB3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B75028D71C5A4093000EB3CF /* fw-shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "fw-shared.xcconfig"; sourceTree = "<group>"; };
+		DACD150047425E7C47A735C6 /* Pods-MWCameraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCameraTests.release.xcconfig"; path = "Target Support Files/Pods-MWCameraTests/Pods-MWCameraTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F4C1B1746F581EE9B10287 /* Pods_MWCamera.framework in Frameworks */,
+				46DF196E73E18F78A1EEF200 /* Pods_MWCamera_MWCamera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7140564F933104A254F07319 /* Pods_MWCameraTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +75,10 @@
 			children = (
 				539BE261DFF04D799EDA4620 /* Pods-MWCamera.debug.xcconfig */,
 				135FCAF079ABE628BBC9B86E /* Pods-MWCamera.release.xcconfig */,
+				2F44F9B44C7934CDFEE9509C /* Pods-MWCamera-MWCamera.debug.xcconfig */,
+				47C5780F7877BB8A7631156D /* Pods-MWCamera-MWCamera.release.xcconfig */,
+				9AEEC6BA5AB5C99169C37D4E /* Pods-MWCameraTests.debug.xcconfig */,
+				DACD150047425E7C47A735C6 /* Pods-MWCameraTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -144,7 +155,8 @@
 		F520872FFE2790CD7BF7609F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7116908E02A361817603828C /* Pods_MWCamera.framework */,
+				B39F242EF3C0C610695414C1 /* Pods_MWCamera_MWCamera.framework */,
+				614CAF440DB67E7781529CB5 /* Pods_MWCameraTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 				B75028AD1C5A3F94000EB3CF /* Sources */,
 				B75028AE1C5A3F94000EB3CF /* Frameworks */,
 				B75028AF1C5A3F94000EB3CF /* Resources */,
+				A302F8731299CD0F7AA092D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B75028D11C5A3F94000EB3CF /* Build configuration list for PBXNativeTarget "MWCameraTests" */;
 			buildPhases = (
+				31EDAFE4A70EC0CD07CB7A54 /* [CP] Check Pods Manifest.lock */,
 				B75028C11C5A3F94000EB3CF /* Sources */,
 				B75028C21C5A3F94000EB3CF /* Frameworks */,
 				B75028C31C5A3F94000EB3CF /* Resources */,
@@ -256,6 +270,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31EDAFE4A70EC0CD07CB7A54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MWCameraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A302F8731299CD0F7AA092D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MWCamera-MWCamera/Pods-MWCamera-MWCamera-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/MobileWorkflowCore/MobileWorkflowCore.framework/MobileWorkflowCore",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobileWorkflowCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MWCamera-MWCamera/Pods-MWCamera-MWCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB94DC389D38122A09BD4752 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,7 +325,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MWCamera-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MWCamera-MWCamera-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -436,7 +490,7 @@
 		};
 		B75028CF1C5A3F94000EB3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 539BE261DFF04D799EDA4620 /* Pods-MWCamera.debug.xcconfig */;
+			baseConfigurationReference = 2F44F9B44C7934CDFEE9509C /* Pods-MWCamera-MWCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MWCamera/Supporting Files/MWCamera.entitlements";
@@ -453,7 +507,7 @@
 		};
 		B75028D01C5A3F94000EB3CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 135FCAF079ABE628BBC9B86E /* Pods-MWCamera.release.xcconfig */;
+			baseConfigurationReference = 47C5780F7877BB8A7631156D /* Pods-MWCamera-MWCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MWCamera/Supporting Files/MWCamera.entitlements";
@@ -470,6 +524,7 @@
 		};
 		B75028D21C5A3F94000EB3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEEC6BA5AB5C99169C37D4E /* Pods-MWCameraTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
@@ -486,6 +541,7 @@
 		};
 		B75028D31C5A3F94000EB3CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DACD150047425E7C47A735C6 /* Pods-MWCameraTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
