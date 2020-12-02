@@ -517,6 +517,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BQHMJ2C6RL;
 				INFOPLIST_FILE = "MWCamera/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.MWCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,6 +536,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = BQHMJ2C6RL;
 				INFOPLIST_FILE = "MWCamera/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.MWCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
