@@ -9,11 +9,15 @@ import UIKit
 import Foundation
 import AVFoundation
 
-final class MWQRCodeStepViewController: UIViewController {
+class MWQRCodeStepViewController: UIViewController {
     
     //MARK: Private properties
     private let captureSession = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer?
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
     
     //MARK: Lifecycle
     override func viewDidLoad() {
