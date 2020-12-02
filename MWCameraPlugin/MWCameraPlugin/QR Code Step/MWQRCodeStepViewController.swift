@@ -82,7 +82,11 @@ public class MWQRCodeStepViewController: ORKStepViewController {
             return
         }
         let result = ORKResult(identifier: step.identifier)
-        assertionFailure("The result is not being saved!")
+        if let _ = result.userInfo {
+            result.userInfo![step.identifier] = code
+        } else {
+            result.userInfo = [step.identifier:code]
+        }
         self.addResult(result)
         self.goForward()
     }
