@@ -15,6 +15,10 @@ public class MWQRCodeStepViewController: ORKStepViewController {
     //MARK: Private properties
     private let captureSession = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer?
+    private var qrCodeStep: MWCameraQRCodeStep {
+        guard let qrCodeStep = self.step as? MWCameraQRCodeStep else { preconditionFailure("Unexpected step type. Expecting \(String(describing: MWCameraQRCodeStep.self)), got \(String(describing: type(of: self.step)))") }
+        return qrCodeStep
+    }
     
     //MARK: Lifecycle
     public override func viewDidLoad() {
@@ -102,13 +106,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
     }
     
     private func found(code: String) {
-        guard let step = self.step else {
-            self.show(NSError(domain: "MWCameraPlugin.qrCode", code: 2, userInfo: [NSLocalizedDescriptionKey:"QR Code found, but the step is missing. We can't continue."])) { [weak self] in
-                self?.goBackward()
-            }
-            return
-        }
-        let result = MWQRCodeResult(identifier: step.identifier, qrCode: code)
+        let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: code)
         self.addResult(result)
         self.goForward()
     }
