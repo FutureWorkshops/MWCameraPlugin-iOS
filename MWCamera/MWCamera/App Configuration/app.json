@@ -1,0 +1,37 @@
+{
+    "gatherAnalytics": false,
+    "id": 392,
+    "locales": [],
+    "name": "QR Code",
+    "navigationStyle": "list",
+    "servers": [],
+    "systemTintColor": "blue",
+    "workflows": [
+        {
+            "id": 757,
+            "identifier": "QR Code Scanner",
+            "materialIconName": "",
+            "name": "QR Code Scanner",
+            "navigationRules": [
+                {
+                    "from": "scan_qr_code",
+                    "rules": [
+                        {
+                            "to": "ORKNullStepIdentifier"
+                        }
+                    ]
+                }
+            ],
+            "sfSymbolName": "",
+            "steps": [
+                {
+                    "identifier": "scan_qr_code",
+                    "optional": false,
+                    "title": "Scan QR Code",
+                    "type": "io.mobileworkflow.qrcodescanner",
+                    "uuid": "47db85cf-13d4-4736-a087-6a2af9f43765"
+                }
+            ]
+        }
+    ]
+}
