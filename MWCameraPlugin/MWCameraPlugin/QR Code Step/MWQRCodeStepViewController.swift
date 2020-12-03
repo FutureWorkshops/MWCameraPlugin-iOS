@@ -68,6 +68,33 @@ public class MWQRCodeStepViewController: ORKStepViewController {
             self.previewLayer!.videoGravity = .resizeAspectFill
             self.view.layer.addSublayer(previewLayer!)
             
+            let labelContainer = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
+            labelContainer.translatesAutoresizingMaskIntoConstraints = false
+            labelContainer.layer.cornerRadius = 4
+            labelContainer.layer.masksToBounds = true
+            
+            let label = UILabel(frame: .zero)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.text = "Focus on a QR code"
+            label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+            label.numberOfLines = 0
+            label.textAlignment = .center
+            
+            labelContainer.contentView.addSubview(label)
+            self.view.addSubview(labelContainer)
+            
+            NSLayoutConstraint.activate([
+                label.leadingAnchor.constraint(equalTo: labelContainer.leadingAnchor, constant: 8),
+                label.trailingAnchor.constraint(equalTo: labelContainer.trailingAnchor, constant: -8),
+                label.topAnchor.constraint(equalTo: labelContainer.topAnchor, constant: 8),
+                label.bottomAnchor.constraint(equalTo: labelContainer.bottomAnchor, constant: -8),
+                
+                labelContainer.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+                labelContainer.trailingAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+                labelContainer.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -32),
+                labelContainer.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor)
+            ])
+            
             self.captureSession.startRunning()
         } catch {
             
