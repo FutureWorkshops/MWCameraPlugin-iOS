@@ -5,6 +5,9 @@
       location = "group:MWCamera/MWCamera.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MWCameraPlugin/MWCameraPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
