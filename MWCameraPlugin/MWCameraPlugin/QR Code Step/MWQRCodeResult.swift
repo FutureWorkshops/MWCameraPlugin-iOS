@@ -24,11 +24,8 @@ final class MWQRCodeResult: ORKResult, Codable {
     }
     
     required init?(coder decoder: NSCoder) {
-        if let qrCode = decoder.decodeObject(forKey: kQRCode) as? String {
-            self.qrCode = qrCode
-        } else {
-            return nil
-        }
+        guard let qrCode = decoder.decodeObject(forKey: kQRCode) as? String else { return nil }
+        self.qrCode = qrCode
         super.init(coder: decoder)
     }
     
