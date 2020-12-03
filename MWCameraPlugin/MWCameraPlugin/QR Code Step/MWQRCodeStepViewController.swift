@@ -108,12 +108,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
             }
             return
         }
-        let result = ORKResult(identifier: step.identifier)
-        if let _ = result.userInfo {
-            result.userInfo![step.identifier] = code
-        } else {
-            result.userInfo = [step.identifier:code]
-        }
+        let result = MWQRCodeResult(identifier: step.identifier, qrCode: code)
         self.addResult(result)
         self.goForward()
     }
