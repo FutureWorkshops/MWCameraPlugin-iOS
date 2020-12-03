@@ -99,6 +99,13 @@ public class MWQRCodeStepViewController: ORKStepViewController {
                 labelContainer.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor)
             ])
             
+            let widthCameraView = self.view.bounds.width
+            let heightCameraView = self.view.bounds.height
+            self.view.mask(withRect: CGRect(x: 20*4,
+                                            y: (heightCameraView / 2) - (widthCameraView / 2),
+                                            width: widthCameraView - 40*4,
+                                            height: widthCameraView - 40*4))
+            
             self.captureSession.startRunning()
         } catch {
             
@@ -126,5 +133,50 @@ extension MWQRCodeStepViewController: AVCaptureMetadataOutputObjectsDelegate {
         } else {
             self.captureSession.startRunning()
         }
+    }
+}
+
+private extension UIView {
+    func mask(withRect rect: CGRect) {
+        let path = UIBezierPath(rect: rect)
+        let maskLayer = CAShapeLayer()
+
+        path.append(UIBezierPath(rect: self.superview?.bounds ?? self.bounds))
+
+        maskLayer.path = path.cgPath
+
+        self.layer.mask = maskLayer
+        
+        let dashLength: CGFloat = 20.0
+        let cornerPath = UIBezierPath()
+        
+        // top left
+        cornerPath.move(to: CGPoint(x: rect.origin.x, y: rect.origin.y + dashLength))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x + dashLength, y: rect.origin.y))
+        
+        // top right
+        cornerPath.move(to: CGPoint(x: rect.origin.x + rect.width - dashLength, y: rect.origin.y))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y + dashLength))
+        
+        // bottom right
+        cornerPath.move(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y + rect.height - dashLength))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x + rect.width, y: rect.origin.y + rect.height))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x + rect.width - dashLength, y: rect.origin.y + rect.height))
+        
+        // bottom left
+        cornerPath.move(to: CGPoint(x: rect.origin.x + dashLength, y: rect.origin.y + rect.height))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height))
+        cornerPath.addLine(to: CGPoint(x: rect.origin.x, y: rect.origin.y + rect.height - dashLength))
+        
+
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = cornerPath.cgPath
+        shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.lineWidth = 4.0
+        shapeLayer.fillColor = UIColor.clear.cgColor
+
+        self.layer.addSublayer(shapeLayer)
     }
 }
