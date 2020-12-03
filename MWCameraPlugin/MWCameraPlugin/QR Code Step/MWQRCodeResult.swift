@@ -8,7 +8,7 @@
 import Foundation
 import MobileWorkflowCore
 
-fileprivate let kQRCode = "kQRCode"
+fileprivate let kQRCode = "qrCode"
 
 final class MWQRCodeResult: ORKResult, Codable {
     
