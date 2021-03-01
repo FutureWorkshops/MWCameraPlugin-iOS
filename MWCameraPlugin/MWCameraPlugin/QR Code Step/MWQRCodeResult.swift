@@ -37,7 +37,7 @@ final class MWQRCodeResult: ORKResult, Codable {
 
 extension MWQRCodeResult: ValueProvider {
     var content: [AnyHashable : Codable] {
-        return [self.identifier:[kQRCode:self.qrCode]]
+        return [self.identifier: self.qrCode]
     }
     
     func fetchValue(for path: String) -> Any? {
