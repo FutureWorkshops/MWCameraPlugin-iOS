@@ -1,7 +1,7 @@
 PODS:
-  - MobileWorkflow (0.0.86):
-    - MobileWorkflow/Core (= 0.0.86)
-  - MobileWorkflow/Core (0.0.86)
+  - MobileWorkflow (0.0.93):
+    - MobileWorkflow/Core (= 0.0.93)
+  - MobileWorkflow/Core (0.0.93)
 
 DEPENDENCIES:
   - MobileWorkflow
@@ -11,7 +11,7 @@ SPEC REPOS:
     - MobileWorkflow
 
 SPEC CHECKSUMS:
-  MobileWorkflow: b92456c69dde469794fa62b0e1760fb7fa741d8f
+  MobileWorkflow: c55fe7037f4581e11b498da5542c927c1fe238e1
 
 PODFILE CHECKSUM: 56622759a4f2dfff76fc44fe1d3629c54718a10d
 
