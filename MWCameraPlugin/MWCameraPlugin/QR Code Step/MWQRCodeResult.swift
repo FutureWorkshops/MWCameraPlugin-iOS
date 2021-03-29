@@ -8,8 +8,6 @@
 import Foundation
 import MobileWorkflowCore
 
-fileprivate let kQRCode = "qrCode"
-
 final class MWQRCodeResult: ORKResult, Codable {
     
     let qrCode: String
@@ -24,14 +22,25 @@ final class MWQRCodeResult: ORKResult, Codable {
     }
     
     required init?(coder decoder: NSCoder) {
-        guard let qrCode = decoder.decodeObject(forKey: kQRCode) as? String else { return nil }
+        guard let qrCode = decoder.decodeObject() as? String else { return nil }
         self.qrCode = qrCode
         super.init(coder: decoder)
     }
     
     override func encode(with coder: NSCoder) {
-        coder.encode(self.qrCode, forKey: kQRCode)
+        coder.encode(self.qrCode)
         super.encode(with: coder)
+    }
+    
+    init(from decoder: Decoder) throws {
+        var container = try decoder.singleValueContainer()
+        self.qrCode = try container.decode(String.self)
+        super.init()
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(self.qrCode)
     }
 }
 
