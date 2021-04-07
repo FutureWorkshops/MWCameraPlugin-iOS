@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
     s.subspec 'Core' do |cs|
 	    cs.dependency            'MobileWorkflow'
         cs.source_files          = 'MWCameraPlugin/MWCameraPlugin/**/*.swift'
+	cs.resources		 = ['MWCameraPlugin/MWCameraPlugin/**/*.strings']
     end
 end
