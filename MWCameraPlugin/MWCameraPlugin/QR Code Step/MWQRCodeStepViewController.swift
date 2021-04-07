@@ -50,7 +50,30 @@ public class MWQRCodeStepViewController: ORKStepViewController {
         }
     }
     
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate { context in
+            self.updateOrientation()
+        } completion: { context in }
+    }
+    
     //MARK: Private methods
+    
+    private func updateOrientation() {
+        guard let interfaceOrientation = self.view.window?.windowScene?.interfaceOrientation else { return }
+        
+        let videoOrientation: AVCaptureVideoOrientation
+        switch interfaceOrientation {
+        case .landscapeRight: videoOrientation = .landscapeRight
+        case .landscapeLeft: videoOrientation = .landscapeLeft
+        case .portrait: videoOrientation = .portrait
+        case .portraitUpsideDown: videoOrientation = .portraitUpsideDown
+        case .unknown: videoOrientation = .portrait
+        }
+        self.previewLayer?.connection?.videoOrientation = videoOrientation
+    }
+    
     private func setupVideoCapture() {
         do {
             guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { throw NSError(domain: "MWCameraPlugin.qrCode", code: 0, userInfo: [NSLocalizedDescriptionKey:"This device doesn't support recording video."]) }
@@ -70,7 +93,8 @@ public class MWQRCodeStepViewController: ORKStepViewController {
             self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
             self.previewLayer!.frame = self.view.layer.bounds
             self.previewLayer!.videoGravity = .resizeAspectFill
-            self.view.layer.addSublayer(previewLayer!)
+            self.view.layer.addSublayer(self.previewLayer!)
+            self.updateOrientation()
             
             let labelContainer = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
             labelContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +141,6 @@ public class MWQRCodeStepViewController: ORKStepViewController {
         self.addResult(result)
         self.goForward()
     }
-
 }
 
 //MARK: AVCaptureMetadataOutputObjectsDelegate
@@ -139,13 +162,6 @@ extension MWQRCodeStepViewController: AVCaptureMetadataOutputObjectsDelegate {
 private extension UIView {
     func mask(withRect rect: CGRect) {
         let path = UIBezierPath(rect: rect)
-        let maskLayer = CAShapeLayer()
-
-        path.append(UIBezierPath(rect: self.superview?.bounds ?? self.bounds))
-
-        maskLayer.path = path.cgPath
-
-        self.layer.mask = maskLayer
         
         let dashLength: CGFloat = 20.0
         let cornerPath = UIBezierPath()
