@@ -1,0 +1,11 @@
+/* 
+  Localization.strings
+  MWCameraPlugin
+
+  Created by Eric Sans on 7/4/21.
+  
+*/
+
+"alert.error.title" = "Error";
+"alert.error.message" = "Camera permission is denied. Please, grant access to the camera in the Settings app.";
+"qr.label" = "Focus on a QR code";
