@@ -53,8 +53,8 @@ public class MWQRCodeStepViewController: ORKStepViewController {
     public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
-        coordinator.animate { context in
-            self.updateOrientation()
+        coordinator.animate { [weak self] context in
+            self?.updateOrientation()
         } completion: { context in }
     }
     
