@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MWCameraPlugin
+
+  Created by Eric Sans on 7/4/21.
+  
+*/
+
+"alert.error.title" = "خطأ";
+"alert.error.message" = "تم رفض إذن الكاميرا. من فضلك ، امنح حق الوصول إلى الكاميرا في تطبيق الإعدادات.";
+"qr.label" = "ركز على رمز الاستجابة السريعة";

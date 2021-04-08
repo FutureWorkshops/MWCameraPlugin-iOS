@@ -29,7 +29,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
                 if granted {
                     self?.setupVideoCapture()
                 } else {
-                    let alertController = UIAlertController(title: "Error", message: "Camera permission is denied. Please, grant access to the camera in the Settings app.", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: L10n.Camera.errorTitle, message: L10n.Camera.errorMessage, preferredStyle: .alert)
                     self?.present(alertController, animated: true)
                 }
             }
@@ -103,7 +103,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
             
             let label = UILabel(frame: .zero)
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Focus on a QR code"
+            label.text = L10n.Camera.qrLabel
             label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
             label.numberOfLines = 0
             label.textAlignment = .center

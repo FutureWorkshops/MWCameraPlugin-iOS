@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                  = 'MWCameraPlugin'
-    s.version               = '0.0.8'
+    s.version               = '0.0.10'
     s.summary               = 'Camera plugin for MobileWorkflow on iOS.'
     s.description           = <<-DESC
     Camera plugin for MobileWorkflow on iOS, containg camera capture related steps:
@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
     s.subspec 'Core' do |cs|
 	    cs.dependency            'MobileWorkflow'
         cs.source_files          = 'MWCameraPlugin/MWCameraPlugin/**/*.swift'
+	cs.resources		 = ['MWCameraPlugin/MWCameraPlugin/**/*.strings']
     end
 end
