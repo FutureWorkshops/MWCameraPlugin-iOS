@@ -55,7 +55,6 @@ internal enum L10n {
     private static var bundle: Bundle { Bundle(for: MWCameraQRCodeStep.self) }
     
     static func localisedString(key: String, fallback: String? = nil) -> String {
-        print(bundle.bundleURL)
         return bundle.localizedString(forKey: key, value: fallback, table: LocalizationTable)
     }
     
