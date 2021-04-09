@@ -17,6 +17,7 @@ public struct MWCameraPlugin: MobileWorkflowPlugin {
 public enum MWCameraStepType: String, MobileWorkflowStepType, CaseIterable {
     
     case qrCode = "io.mobileworkflow.qrcodescanner"
+    case qrApp = "io.mobileworkflow.qrappscanner"
     
     public var typeName: String {
         return self.rawValue
@@ -25,6 +26,7 @@ public enum MWCameraStepType: String, MobileWorkflowStepType, CaseIterable {
     public var stepClass: MobileWorkflowStep.Type {
         switch self {
         case .qrCode: return MWCameraQRCodeStep.self
+        case .qrApp: return MWCameraQRAppStep.self
         }
     }
 }
@@ -44,11 +46,33 @@ public class MWCameraQRCodeStep: ORKStep {
     }
 }
 
-extension MWCameraQRCodeStep: MobileWorkflowStep {
+extension MWCameraQRCodeStep: MobileWorkflowStep, QrStep {
     public static func build(stepInfo: StepInfo, services: MobileWorkflowServices) throws -> Step {
         return MWCameraQRCodeStep(identifier: stepInfo.data.identifier)
     }
 }
+
+public class MWCameraQRAppStep: ORKStep {
+    override init(identifier: String) {
+        super.init(identifier: identifier)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func stepViewControllerClass() -> AnyClass {
+        return MWQRCodeStepViewController.self
+    }
+}
+
+extension MWCameraQRAppStep: MobileWorkflowStep, QrStep {
+    public static func build(stepInfo: StepInfo, services: MobileWorkflowServices) throws -> Step {
+        return MWCameraQRAppStep(identifier: stepInfo.data.identifier)
+    }
+}
+
+protocol QrStep {}
 
 internal enum L10n {
     private static let LocalizationTable = "Localizable"

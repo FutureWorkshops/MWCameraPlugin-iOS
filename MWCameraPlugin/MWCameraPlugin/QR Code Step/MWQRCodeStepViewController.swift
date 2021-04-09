@@ -15,10 +15,12 @@ public class MWQRCodeStepViewController: ORKStepViewController {
     //MARK: Private properties
     private let captureSession = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer?
-    private var qrCodeStep: MWCameraQRCodeStep {
-        guard let qrCodeStep = self.step as? MWCameraQRCodeStep else { preconditionFailure("Unexpected step type. Expecting \(String(describing: MWCameraQRCodeStep.self)), got \(String(describing: type(of: self.step)))") }
+    private var qrStep: QrStep {
+        guard let qrCodeStep = self.step as? QrStep else { preconditionFailure("Unexpected step type. Expecting \(String(describing: QrStep.self)), got \(String(describing: type(of: self.step)))") }
         return qrCodeStep
     }
+    
+    private var onCodeFound: ((String) -> Void)?
     
     //MARK: Lifecycle
     public override func viewDidLoad() {
@@ -96,32 +98,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
             self.view.layer.addSublayer(self.previewLayer!)
             self.updateOrientation()
             
-            let labelContainer = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
-            labelContainer.translatesAutoresizingMaskIntoConstraints = false
-            labelContainer.layer.cornerRadius = 4
-            labelContainer.layer.masksToBounds = true
-            
-            let label = UILabel(frame: .zero)
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = L10n.Camera.qrLabel
-            label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-            label.numberOfLines = 0
-            label.textAlignment = .center
-            
-            labelContainer.contentView.addSubview(label)
-            self.view.addSubview(labelContainer)
-            
-            NSLayoutConstraint.activate([
-                label.leadingAnchor.constraint(equalTo: labelContainer.leadingAnchor, constant: 8),
-                label.trailingAnchor.constraint(equalTo: labelContainer.trailingAnchor, constant: -8),
-                label.topAnchor.constraint(equalTo: labelContainer.topAnchor, constant: 8),
-                label.bottomAnchor.constraint(equalTo: labelContainer.bottomAnchor, constant: -8),
-                
-                labelContainer.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
-                labelContainer.trailingAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-                labelContainer.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -32),
-                labelContainer.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor)
-            ])
+            self.setupInfoView()
             
             let widthCameraView = self.view.bounds.width
             let heightCameraView = self.view.bounds.height
@@ -136,10 +113,40 @@ public class MWQRCodeStepViewController: ORKStepViewController {
         }
     }
     
+    private func setupInfoView() {
+        var container: InformationView!
+        
+        if let step = self.qrStep as? MWCameraQRCodeStep {
+            container = InformationView(description: L10n.Camera.qrLabel)
+            
+            self.onCodeFound = { [weak self] code in
+                let result = MWQRCodeResult(identifier: step.identifier, qrCode: code)
+                self?.addResult(result)
+                self?.goForward()
+            }
+        } else {
+            container = InformationView(title: "Scan QR Code", description: "Please scan the app's QR code to start your workflow")
+            
+            self.onCodeFound = { code in
+                guard let url = URL(string: code) else {
+                    return
+                }
+                
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+        self.view.addSubview(container)
+        
+        NSLayoutConstraint.activate([
+            container.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            container.trailingAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            container.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -32),
+            container.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+    }
+    
     private func found(code: String) {
-        let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: code)
-        self.addResult(result)
-        self.goForward()
+        self.onCodeFound?(code)
     }
 }
 
