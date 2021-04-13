@@ -33,7 +33,7 @@ final class MWQRCodeResult: ORKResult, Codable {
     }
     
     init(from decoder: Decoder) throws {
-        var container = try decoder.singleValueContainer()
+        let container = try decoder.singleValueContainer()
         self.qrCode = try container.decode(String.self)
         super.init()
     }
