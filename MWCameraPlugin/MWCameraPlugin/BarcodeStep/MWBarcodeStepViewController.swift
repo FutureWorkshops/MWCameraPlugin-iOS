@@ -21,7 +21,7 @@ public class MWBarcodeStepViewController: ORKStepViewController {
             //TODO: Store the result
 //            let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: codeFound)
 //            self.addResult(result)
-            self.goForward()
+//            self.goForward()
         }
         self.addCovering(childViewController: barcodeScanner)
     }
@@ -36,7 +36,18 @@ private class _MWBarcodeStepViewController: MobileWorkflowBarcodeScannerViewCont
     }
     
     override var supportedBarcodes: [AVMetadataObject.ObjectType] {
-        get { [.upce, .code39, .code39Mod43, .ean13, .ean8, .code93, .code128, .pdf417, .aztec, .interleaved2of5, .itf14, .dataMatrix] }
+        get { [.upce,
+               .code39,
+               .code39Mod43,
+               .ean13,
+               .ean8,
+               .code93,
+               .code128,
+               .pdf417,
+               .aztec,
+               .interleaved2of5,
+               .itf14,
+               .dataMatrix] }
         set {  }
     }
     
