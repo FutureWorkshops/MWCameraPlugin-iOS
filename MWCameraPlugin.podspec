@@ -1,9 +1,10 @@
 Pod::Spec.new do |s|
     s.name                  = 'MWCameraPlugin'
-    s.version               = '0.0.11'
+    s.version               = '0.0.12'
     s.summary               = 'Camera plugin for MobileWorkflow on iOS.'
     s.description           = <<-DESC
     Camera plugin for MobileWorkflow on iOS, containg camera capture related steps:
+    - MWBarcodeStep
 	- MWQRCodeStep
     DESC
     s.homepage              = 'https://www.mobileworkflow.io'

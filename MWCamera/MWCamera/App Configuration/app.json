@@ -1,20 +1,28 @@
 {
     "gatherAnalytics": false,
-    "id": 392,
+    "id": 1029,
     "locales": [],
-    "name": "QR Code",
+    "name": "Xavi - Camera Plugin",
     "navigationStyle": "list",
     "servers": [],
     "systemTintColor": "blue",
     "workflows": [
         {
-            "id": 757,
-            "identifier": "QR Code Scanner",
+            "id": "6daf0de5-4dc8-4da5-a01d-1c2d9b3c8b1d",
+            "identifier": "Barcode Step",
             "materialIconName": "",
-            "name": "QR Code Scanner",
+            "name": "Barcode Step",
             "navigationRules": [
                 {
-                    "from": "scan_qr_code",
+                    "from": "scan_a_barcode",
+                    "rules": [
+                        {
+                            "to": "result"
+                        }
+                    ]
+                },
+                {
+                    "from": "result",
                     "rules": [
                         {
                             "to": "ORKNullStepIdentifier"
@@ -25,11 +33,67 @@
             "sfSymbolName": "",
             "steps": [
                 {
-                    "identifier": "scan_qr_code",
+                    "identifier": "scan_a_barcode",
                     "optional": false,
-                    "title": "Scan QR Code",
+                    "title": "Scan a barcode",
+                    "type": "io.mobileworkflow.barcodescanner",
+                    "uuid": "59e5e5b6-dc02-4adf-9949-182c762e0838"
+                },
+                {
+                    "_class": "MobileWorkflowEmailStep",
+                    "identifier": "result",
+                    "optional": false,
+                    "requestPropertyIdentifiers": [
+                        "scan_a_barcode.answer"
+                    ],
+                    "title": "Result",
+                    "type": "email",
+                    "uuid": "35be488a-e50e-49c7-b122-b1aa4be1de15"
+                }
+            ]
+        },
+        {
+            "id": "88ecf02b-91c7-4169-966b-2e39e8d9c91a",
+            "identifier": "QRCode Step",
+            "materialIconName": "",
+            "name": "QRCode Step",
+            "navigationRules": [
+                {
+                    "from": "scan_a_qr_code",
+                    "rules": [
+                        {
+                            "to": "result"
+                        }
+                    ]
+                },
+                {
+                    "from": "result",
+                    "rules": [
+                        {
+                            "to": "ORKNullStepIdentifier"
+                        }
+                    ]
+                }
+            ],
+            "sfSymbolName": "",
+            "steps": [
+                {
+                    "identifier": "scan_a_qr_code",
+                    "optional": false,
+                    "title": "Scan a QR code",
                     "type": "io.mobileworkflow.qrcodescanner",
-                    "uuid": "47db85cf-13d4-4736-a087-6a2af9f43765"
+                    "uuid": "9e22a693-a018-4529-a9ec-1b1e4ff7d63c"
+                },
+                {
+                    "_class": "MobileWorkflowEmailStep",
+                    "identifier": "result",
+                    "optional": false,
+                    "requestPropertyIdentifiers": [
+                        "scan_a_qr_code.answer"
+                    ],
+                    "title": "Result",
+                    "type": "email",
+                    "uuid": "01c316ae-5dd2-476b-a665-7158782cbb61"
                 }
             ]
         }

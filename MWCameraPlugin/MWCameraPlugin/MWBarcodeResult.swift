@@ -1,5 +1,5 @@
 //
-//  MWQRCodeResult.swift
+//  MWBarcodeResult.swift
 //  MWCameraPlugin
 //
 //  Created by Xavi Moll on 3/12/20.
@@ -8,57 +8,57 @@
 import Foundation
 import MobileWorkflowCore
 
-final class MWQRCodeResult: ORKResult, Codable {
+final class MWBarcodeResult: ORKResult, Codable {
     
-    let qrCode: String
+    let codeFound: String
     
-    init(identifier: String, qrCode: String) {
-        self.qrCode = qrCode
+    init(identifier: String, codeFound: String) {
+        self.codeFound = codeFound
         super.init(identifier: identifier)
     }
     
     override func copy() -> Any {
-        return MWQRCodeResult(identifier: self.identifier, qrCode: self.qrCode)
+        return MWBarcodeResult(identifier: self.identifier, codeFound: self.codeFound)
     }
     
     required init?(coder decoder: NSCoder) {
         guard let qrCode = decoder.decodeObject() as? String else { return nil }
-        self.qrCode = qrCode
+        self.codeFound = qrCode
         super.init(coder: decoder)
     }
     
     override func encode(with coder: NSCoder) {
-        coder.encode(self.qrCode)
+        coder.encode(self.codeFound)
         super.encode(with: coder)
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        self.qrCode = try container.decode(String.self)
+        self.codeFound = try container.decode(String.self)
         super.init()
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.qrCode)
+        try container.encode(self.codeFound)
     }
 }
 
-extension MWQRCodeResult: ValueProvider {
+extension MWBarcodeResult: ValueProvider {
     var content: [AnyHashable : Codable] {
-        return [self.identifier: self.qrCode]
+        return [self.identifier: self.codeFound]
     }
     
     func fetchValue(for path: String) -> Any? {
-        return self.qrCode
+        return self.codeFound
     }
     
     func fetchProvider(for path: String) -> ValueProvider? {
-        return self.qrCode
+        return self.codeFound
     }
 }
 
-extension MWQRCodeResult: JSONRepresentable {
+extension MWBarcodeResult: JSONRepresentable {
     var jsonContent: String? {
         guard let data = try? JSONEncoder().encode(self) else { return nil }
         return String(data: data, encoding: .utf8)

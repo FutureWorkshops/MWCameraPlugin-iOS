@@ -22,17 +22,21 @@ public class MWQRCodeStepViewController: ORKStepViewController {
         super.viewDidLoad()
         let qrScanner = _MWQRCodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
-            let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: codeFound)
+            let result = MWBarcodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
             self.addResult(result)
             self.goForward()
         }
-        qrScanner.instructionsText = L10n.Camera.qrLabel
         self.addCovering(childViewController: qrScanner)
     }
     
 }
 
 private class _MWQRCodeStepViewController: MobileWorkflowQRScannerViewController {
+    
+    override var instructionsText: String {
+        get { L10n.Camera.qrLabel }
+        set {  }
+    }
     
     private let completion: (String) -> Void
     

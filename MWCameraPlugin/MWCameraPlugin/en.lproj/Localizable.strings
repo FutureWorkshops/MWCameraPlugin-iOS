@@ -9,3 +9,4 @@
 "alert.error.title" = "Error";
 "alert.error.message" = "Camera permission is denied. Please, grant access to the camera in the Settings app.";
 "qr.label" = "Focus on a QR code";
+"barcode.label" = "Focus on a barcode";

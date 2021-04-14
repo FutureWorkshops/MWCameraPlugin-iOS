@@ -1,14 +1,14 @@
 //
-//  MWQRCodeStep.swift
+//  MWBarcodeStep.swift
 //  MWCameraPlugin
 //
-//  Created by Xavi Moll on 2/12/20.
+//  Created by Xavi Moll on 14/4/21.
 //
 
 import Foundation
 import MobileWorkflowCore
 
-public class MWCameraQRCodeStep: ORKStep {
+public class MWBarcodeStep: ORKStep {
     
     override init(identifier: String) {
         super.init(identifier: identifier)
@@ -19,12 +19,12 @@ public class MWCameraQRCodeStep: ORKStep {
     }
     
     public override func stepViewControllerClass() -> AnyClass {
-        return MWQRCodeStepViewController.self
+        return MWBarcodeStepViewController.self
     }
 }
 
-extension MWCameraQRCodeStep: MobileWorkflowStep {
+extension MWBarcodeStep: MobileWorkflowStep {
     public static func build(stepInfo: StepInfo, services: MobileWorkflowServices) throws -> Step {
-        return MWCameraQRCodeStep(identifier: stepInfo.data.identifier)
+        return MWBarcodeStep(identifier: stepInfo.data.identifier)
     }
 }
