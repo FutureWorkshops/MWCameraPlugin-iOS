@@ -4,8 +4,11 @@
 
   Created by Eric Sans on 7/4/21.
   
+ 
+  WARNING: This strings have been automatically translated using Google Translate.
 */
 
 "alert.error.title" = "خطأ";
 "alert.error.message" = "تم رفض إذن الكاميرا. من فضلك ، امنح حق الوصول إلى الكاميرا في تطبيق الإعدادات.";
 "qr.label" = "ركز على رمز الاستجابة السريعة";
+"barcode.label" = "ركز على الباركود";

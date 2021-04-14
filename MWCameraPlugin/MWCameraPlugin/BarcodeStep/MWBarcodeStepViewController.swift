@@ -27,7 +27,6 @@ public class MWBarcodeStepViewController: ORKStepViewController {
 
 private class _MWBarcodeStepViewController: MobileWorkflowBarcodeScannerViewController {
     
-    #warning("The arabic translation is missing")
     override var instructionsText: String {
         get { L10n.Camera.barcodeLabel }
         set {  }
