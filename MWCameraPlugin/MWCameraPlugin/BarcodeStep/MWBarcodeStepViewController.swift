@@ -36,7 +36,7 @@ private class _MWBarcodeStepViewController: MobileWorkflowBarcodeScannerViewCont
     }
     
     override var supportedBarcodes: [AVMetadataObject.ObjectType] {
-        get { [.pdf417] }
+        get { [.upce, .code39, .code39Mod43, .ean13, .ean8, .code93, .code128, .pdf417, .aztec, .interleaved2of5, .itf14, .dataMatrix] }
         set {  }
     }
     
