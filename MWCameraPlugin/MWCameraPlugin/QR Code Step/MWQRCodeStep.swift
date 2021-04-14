@@ -8,27 +8,6 @@
 import Foundation
 import MobileWorkflowCore
 
-public struct MWCameraPlugin: MobileWorkflowPlugin {
-    public static var allStepsTypes: [MobileWorkflowStepType] {
-        return MWCameraStepType.allCases
-    }
-}
-
-public enum MWCameraStepType: String, MobileWorkflowStepType, CaseIterable {
-    
-    case qrCode = "io.mobileworkflow.qrcodescanner"
-    
-    public var typeName: String {
-        return self.rawValue
-    }
-    
-    public var stepClass: MobileWorkflowStep.Type {
-        switch self {
-        case .qrCode: return MWCameraQRCodeStep.self
-        }
-    }
-}
-
 public class MWCameraQRCodeStep: ORKStep {
     
     override init(identifier: String) {
