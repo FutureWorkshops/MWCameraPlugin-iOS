@@ -17,6 +17,7 @@
 		B18A49732577AA4F002F3FD4 /* MWCameraPluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A49722577AA4F002F3FD4 /* MWCameraPluginTests.swift */; };
 		B18A49752577AA4F002F3FD4 /* MWCameraPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = B18A49672577AA4E002F3FD4 /* MWCameraPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1FFDF8826273C0600465B04 /* MWCameraPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFDF8726273C0600465B04 /* MWCameraPlugin.swift */; };
+		B1FFDF9426273C6A00465B04 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFDF9326273C6A00465B04 /* L10n.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B18A49742577AA4F002F3FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1D4D0FB31FC297041608D6F /* Pods_MWCamera_MWCameraPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCamera_MWCameraPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FFDF8726273C0600465B04 /* MWCameraPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWCameraPlugin.swift; sourceTree = "<group>"; };
+		B1FFDF9326273C6A00465B04 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		F5CBE9105CCAE5E898F650BE /* Pods-MWCameraPluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCameraPluginTests.debug.xcconfig"; path = "Target Support Files/Pods-MWCameraPluginTests/Pods-MWCameraPluginTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B1FFDF8726273C0600465B04 /* MWCameraPlugin.swift */,
+				B1FFDF9326273C6A00465B04 /* L10n.swift */,
 				B1FFDF8626273BEF00465B04 /* BarcodeStep */,
 				B180475E2577AC02001EF194 /* QR Code Step */,
 				B18A49672577AA4E002F3FD4 /* MWCameraPlugin.h */,
@@ -312,6 +315,7 @@
 			files = (
 				B124160C2578E876001CD761 /* MWQRCodeResult.swift in Sources */,
 				B18047642577AC71001EF194 /* MWQRCodeStepViewController.swift in Sources */,
+				B1FFDF9426273C6A00465B04 /* L10n.swift in Sources */,
 				B18047602577AC64001EF194 /* MWQRCodeStep.swift in Sources */,
 				B1FFDF8826273C0600465B04 /* MWCameraPlugin.swift in Sources */,
 			);
