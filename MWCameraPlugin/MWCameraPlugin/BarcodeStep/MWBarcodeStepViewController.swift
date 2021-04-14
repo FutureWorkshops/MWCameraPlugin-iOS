@@ -17,11 +17,9 @@ public class MWBarcodeStepViewController: ORKStepViewController {
         super.viewDidLoad()
         let barcodeScanner = _MWBarcodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
-            print(codeFound)
-            //TODO: Store the result
-//            let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: codeFound)
-//            self.addResult(result)
-//            self.goForward()
+            let result = MWBarcodeResult(identifier: self.barcodeStep.identifier, codeFound: codeFound)
+            self.addResult(result)
+            self.goForward()
         }
         self.addCovering(childViewController: barcodeScanner)
     }

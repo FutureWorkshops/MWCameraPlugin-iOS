@@ -10,7 +10,7 @@
 		181326FD86A211AAA0E0FDBA /* Pods_MWCamera_MWCameraPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D4D0FB31FC297041608D6F /* Pods_MWCamera_MWCameraPlugin.framework */; };
 		52B3F98B6A5EE208D5E380CA /* Pods_MWCameraPluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */; };
 		ADF0E456261DC11200DB0103 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF0E458261DC11200DB0103 /* Localizable.strings */; };
-		B124160C2578E876001CD761 /* MWQRCodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124160B2578E876001CD761 /* MWQRCodeResult.swift */; };
+		B124160C2578E876001CD761 /* MWBarcodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124160B2578E876001CD761 /* MWBarcodeResult.swift */; };
 		B18047602577AC64001EF194 /* MWQRCodeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B180475F2577AC64001EF194 /* MWQRCodeStep.swift */; };
 		B18047642577AC71001EF194 /* MWQRCodeStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18047632577AC71001EF194 /* MWQRCodeStepViewController.swift */; };
 		B18A496E2577AA4F002F3FD4 /* MWCameraPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18A49642577AA4E002F3FD4 /* MWCameraPlugin.framework */; };
@@ -39,7 +39,7 @@
 		5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCameraPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF0E457261DC11200DB0103 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADF0E459261DC88D00DB0103 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B124160B2578E876001CD761 /* MWQRCodeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWQRCodeResult.swift; sourceTree = "<group>"; };
+		B124160B2578E876001CD761 /* MWBarcodeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWBarcodeResult.swift; sourceTree = "<group>"; };
 		B180475F2577AC64001EF194 /* MWQRCodeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWQRCodeStep.swift; sourceTree = "<group>"; };
 		B18047632577AC71001EF194 /* MWQRCodeStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWQRCodeStepViewController.swift; sourceTree = "<group>"; };
 		B18A49642577AA4E002F3FD4 /* MWCameraPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MWCameraPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,6 @@
 			children = (
 				B180475F2577AC64001EF194 /* MWQRCodeStep.swift */,
 				B18047632577AC71001EF194 /* MWQRCodeStepViewController.swift */,
-				B124160B2578E876001CD761 /* MWQRCodeResult.swift */,
 			);
 			path = "QR Code Step";
 			sourceTree = "<group>";
@@ -133,6 +132,7 @@
 			children = (
 				B1FFDF8726273C0600465B04 /* MWCameraPlugin.swift */,
 				B1FFDF9326273C6A00465B04 /* L10n.swift */,
+				B124160B2578E876001CD761 /* MWBarcodeResult.swift */,
 				B1FFDF8626273BEF00465B04 /* BarcodeStep */,
 				B180475E2577AC02001EF194 /* QR Code Step */,
 				B18A49672577AA4E002F3FD4 /* MWCameraPlugin.h */,
@@ -319,7 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B124160C2578E876001CD761 /* MWQRCodeResult.swift in Sources */,
+				B124160C2578E876001CD761 /* MWBarcodeResult.swift in Sources */,
 				B18047642577AC71001EF194 /* MWQRCodeStepViewController.swift in Sources */,
 				B1FFDF9426273C6A00465B04 /* L10n.swift in Sources */,
 				B18047602577AC64001EF194 /* MWQRCodeStep.swift in Sources */,

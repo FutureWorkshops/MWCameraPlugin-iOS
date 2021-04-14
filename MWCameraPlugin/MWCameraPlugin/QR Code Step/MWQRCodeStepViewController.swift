@@ -22,7 +22,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
         super.viewDidLoad()
         let qrScanner = _MWQRCodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
-            let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: codeFound)
+            let result = MWBarcodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
             self.addResult(result)
             self.goForward()
         }
