@@ -19,5 +19,6 @@ internal enum L10n {
         static let errorTitle = L10n.localisedString(key: "alert.error.title")
         static let errorMessage = L10n.localisedString(key: "alert.error.message")
         static let qrLabel = L10n.localisedString(key: "qr.label")
+        static let barcodeLabel = L10n.localisedString(key: "barcode.label")
     }
 }

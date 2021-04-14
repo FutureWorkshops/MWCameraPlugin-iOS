@@ -10,4 +10,49 @@ import MobileWorkflowCore
 
 public class MWBarcodeStepViewController: ORKStepViewController {
     
+    //MARK: Private properties
+    private var barcodeStep: MWBarcodeStep { self.step as! MWBarcodeStep }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        let barcodeScanner = _MWBarcodeStepViewController() { [weak self] codeFound in
+            guard let self = self else { return }
+            print(codeFound)
+            //TODO: Store the result
+//            let result = MWQRCodeResult(identifier: self.qrCodeStep.identifier, qrCode: codeFound)
+//            self.addResult(result)
+            self.goForward()
+        }
+        self.addCovering(childViewController: barcodeScanner)
+    }
 }
+
+private class _MWBarcodeStepViewController: MobileWorkflowBarcodeScannerViewController {
+    
+    #warning("The arabic translation is missing")
+    override var instructionsText: String {
+        get { L10n.Camera.barcodeLabel }
+        set {  }
+    }
+    
+    override var supportedBarcodes: [AVMetadataObject.ObjectType] {
+        get { [.pdf417] }
+        set {  }
+    }
+    
+    private let completion: (String) -> Void
+    
+    init(completion: @escaping (String) -> Void) {
+        self.completion = completion
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @objc required dynamic init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override public func found(code: String) {
+        self.completion(code)
+    }
+}
+
