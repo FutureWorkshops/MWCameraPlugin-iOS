@@ -31,7 +31,7 @@ public class MWQRCodeStepViewController: ORKStepViewController {
     
 }
 
-private class _MWQRCodeStepViewController: MobileWorkflowQRScannerViewController {
+private class _MWQRCodeStepViewController: QRScannerViewController {
     
     override var instructionsText: String {
         get { L10n.Camera.qrLabel }
