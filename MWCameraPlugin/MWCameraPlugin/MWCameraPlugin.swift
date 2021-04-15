@@ -8,13 +8,13 @@
 import Foundation
 import MobileWorkflowCore
 
-public struct MWCameraPlugin: MobileWorkflowPlugin {
-    public static var allStepsTypes: [MobileWorkflowStepType] {
+public struct MWCameraPlugin: Plugin {
+    public static var allStepsTypes: [StepType] {
         return MWCameraStepType.allCases
     }
 }
 
-public enum MWCameraStepType: String, MobileWorkflowStepType, CaseIterable {
+public enum MWCameraStepType: String, StepType, CaseIterable {
     
     case qrCode = "io.mobileworkflow.qrcodescanner"
     case barcode = "io.mobileworkflow.barcodescanner"
