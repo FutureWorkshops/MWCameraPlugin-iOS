@@ -23,7 +23,7 @@ public enum MWCameraStepType: String, StepType, CaseIterable {
         return self.rawValue
     }
     
-    public var stepClass: MobileWorkflowStep.Type {
+    public var stepClass: BuildableStep.Type {
         switch self {
         case .qrCode: return MWCameraQRCodeStep.self
         case .barcode: return MWBarcodeStep.self

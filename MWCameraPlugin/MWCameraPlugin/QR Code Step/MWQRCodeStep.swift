@@ -23,7 +23,7 @@ public class MWCameraQRCodeStep: ORKStep {
     }
 }
 
-extension MWCameraQRCodeStep: MobileWorkflowStep {
+extension MWCameraQRCodeStep: BuildableStep {
     public static func build(stepInfo: StepInfo, services: StepServices) throws -> Step {
         return MWCameraQRCodeStep(identifier: stepInfo.data.identifier)
     }

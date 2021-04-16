@@ -23,7 +23,7 @@ public class MWBarcodeStep: ORKStep {
     }
 }
 
-extension MWBarcodeStep: MobileWorkflowStep {
+extension MWBarcodeStep: BuildableStep {
     public static func build(stepInfo: StepInfo, services: StepServices) throws -> Step {
         return MWBarcodeStep(identifier: stepInfo.data.identifier)
     }
