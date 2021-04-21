@@ -9,7 +9,7 @@
 import MobileWorkflowCore
 import MWCameraPlugin
 
-class SceneDelegate: MobileWorkflowSceneDelegate {
+class SceneDelegate: MWSceneDelegate {
     
     override func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         

@@ -25,7 +25,7 @@ public class MWBarcodeStepViewController: ORKStepViewController {
     }
 }
 
-private class _MWBarcodeStepViewController: MobileWorkflowBarcodeScannerViewController {
+private class _MWBarcodeStepViewController: BarcodeScannerViewController {
     
     override var instructionsText: String {
         get { L10n.Camera.barcodeLabel }
