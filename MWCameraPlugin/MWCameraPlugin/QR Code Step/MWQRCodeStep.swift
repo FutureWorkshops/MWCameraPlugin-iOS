@@ -8,9 +8,9 @@
 import Foundation
 import MobileWorkflowCore
 
-public class MWCameraQRCodeStep: ORKStep {
+public class MWCameraQRCodeStep: MWStep {
     
-    override init(identifier: String) {
+    public init(identifier: String) {
         super.init(identifier: identifier)
     }
     
@@ -18,8 +18,8 @@ public class MWCameraQRCodeStep: ORKStep {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func stepViewControllerClass() -> AnyClass {
-        return MWQRCodeStepViewController.self
+    public override func instantiateViewController() -> StepViewController {
+        MWQRCodeStepViewController(step: self)
     }
 }
 

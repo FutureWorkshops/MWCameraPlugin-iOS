@@ -5,12 +5,12 @@
 //  Created by Xavi Moll on 14/4/21.
 //
 
-import Foundation
+import UIKit
 import MobileWorkflowCore
 
-public class MWBarcodeStep: ORKStep {
+public class MWBarcodeStep: MWStep {
     
-    override init(identifier: String) {
+    init(identifier: String) {
         super.init(identifier: identifier)
     }
     
@@ -18,8 +18,8 @@ public class MWBarcodeStep: ORKStep {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func stepViewControllerClass() -> AnyClass {
-        return MWBarcodeStepViewController.self
+    public override func instantiateViewController() -> StepViewController {
+        MWBarcodeStepViewController(step: self)
     }
 }
 
