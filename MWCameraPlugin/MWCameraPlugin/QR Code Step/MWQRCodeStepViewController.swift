@@ -6,29 +6,23 @@
 //
 
 import UIKit
-import Foundation
-import AVFoundation
 import MobileWorkflowCore
 
-public class MWQRCodeStepViewController: ORKStepViewController {
+public class MWQRCodeStepViewController: MWStepViewController {
     
     //MARK: Private properties
-    private var qrCodeStep: MWCameraQRCodeStep {
-        guard let qrCodeStep = self.step as? MWCameraQRCodeStep else { preconditionFailure("Unexpected step type. Expecting \(String(describing: MWCameraQRCodeStep.self)), got \(String(describing: type(of: self.step)))") }
-        return qrCodeStep
-    }
+    private var qrCodeStep: MWCameraQRCodeStep { self.mwStep as! MWCameraQRCodeStep }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         let qrScanner = _MWQRCodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
             let result = MWBarcodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
-            self.addResult(result)
+            self.addStepResult(result)
             self.goForward()
         }
         self.addCovering(childViewController: qrScanner)
     }
-    
 }
 
 private class _MWQRCodeStepViewController: QRScannerViewController {

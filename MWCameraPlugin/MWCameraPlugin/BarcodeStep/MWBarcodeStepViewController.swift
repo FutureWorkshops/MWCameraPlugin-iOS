@@ -8,17 +8,17 @@
 import Foundation
 import MobileWorkflowCore
 
-public class MWBarcodeStepViewController: ORKStepViewController {
+public class MWBarcodeStepViewController: MWStepViewController {
     
     //MARK: Private properties
-    private var barcodeStep: MWBarcodeStep { self.step as! MWBarcodeStep }
+    private var barcodeStep: MWBarcodeStep { self.mwStep as! MWBarcodeStep }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         let barcodeScanner = _MWBarcodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
             let result = MWBarcodeResult(identifier: self.barcodeStep.identifier, codeFound: codeFound)
-            self.addResult(result)
+            self.addStepResult(result)
             self.goForward()
         }
         self.addCovering(childViewController: barcodeScanner)
