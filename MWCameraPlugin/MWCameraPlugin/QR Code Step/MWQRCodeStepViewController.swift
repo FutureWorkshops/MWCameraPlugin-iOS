@@ -15,9 +15,13 @@ public class MWQRCodeStepViewController: MWStepViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = nil
+        self.navigationItem.largeTitleDisplayMode = .never
+        
         let qrScanner = _MWQRCodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
-            let result = MWBarcodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
+            let result = BarcodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
             self.addStepResult(result)
             self.goForward()
         }
