@@ -10,14 +10,13 @@ import MobileWorkflowCore
 
 public class MWBarcodeStepViewController: MWStepViewController {
     
+    public override var titleMode: StepViewControllerTitleMode { .customOrNone }
+    
     //MARK: Private properties
     private var barcodeStep: MWBarcodeStep { self.mwStep as! MWBarcodeStep }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.title = nil
-        self.navigationItem.largeTitleDisplayMode = .never
         
         let barcodeScanner = _MWBarcodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
