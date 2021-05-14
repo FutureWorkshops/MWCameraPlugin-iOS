@@ -10,14 +10,13 @@ import MobileWorkflowCore
 
 public class MWQRCodeStepViewController: MWStepViewController {
     
+    public override var titleMode: StepViewControllerTitleMode { .customOrNone }
+    
     //MARK: Private properties
     private var qrCodeStep: MWCameraQRCodeStep { self.mwStep as! MWCameraQRCodeStep }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.title = nil
-        self.navigationItem.largeTitleDisplayMode = .never
         
         let qrScanner = _MWQRCodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
