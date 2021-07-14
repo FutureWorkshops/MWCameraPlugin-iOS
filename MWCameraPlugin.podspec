@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 	s.default_subspecs      = 'Core'
 	
     s.subspec 'Core' do |cs|
-	    cs.dependency            'MobileWorkflow'
+        cs.dependency            'MobileWorkflow', '~> 1.0.0'
         cs.source_files          = 'MWCameraPlugin/MWCameraPlugin/**/*.swift'
 	cs.resources		 = ['MWCameraPlugin/MWCameraPlugin/**/*.strings']
     end
