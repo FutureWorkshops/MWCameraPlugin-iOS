@@ -10,3 +10,17 @@
 "alert.error.message" = "Camera permission is denied. Please, grant access to the camera in the Settings app.";
 "qr.label" = "Focus on a QR code";
 "barcode.label" = "Focus on a barcode";
+
+//VideoCaptureStep
+"videoCaptureStep.startRecording" = "Record";
+"videoCaptureStep.stopRecording" = "Stop Recording";
+"videoCaptureStep.startAgain" = "Start Again";
+"videoCaptureStep.captureErrorNoPermission" = "In order to complete this step, allow this app access to the camera in Settings.";
+"videoCaptureStep.captureErrorCameraNotFound" = "No camera found.  This step cannot be completed.";
+"videoCaptureStep.captureErrorNoPermissions" = "In order to complete this step, allow this app access to the camera in Settings.";
+"videoCaptureStep.cameraUnavailable" = "Camera not available in split screen.";
+"videoCaptureStep.rotateDevice" = "Please rotate device";
+"videoCaptureStep.openCamera" = "Open Camera";
+"videoCaptureStep.cancelTitle" = "Cancel";
+"videoCaptureStep.nextButtonTitle" = "Next";
+"videoCaptureStep.skipButtonTitle" = "Skip";

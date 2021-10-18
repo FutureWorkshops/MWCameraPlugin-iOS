@@ -21,4 +21,21 @@ internal enum L10n {
         static let qrLabel = L10n.localisedString(key: "qr.label")
         static let barcodeLabel = L10n.localisedString(key: "barcode.label")
     }
+    
+    enum VideoCaptureStep {
+        static let startRecording = L10n.localisedString(key: "videoCaptureStep.startRecording")
+        static let stopRecording = L10n.localisedString(key: "videoCaptureStep.stopRecording")
+        static let startAgain = L10n.localisedString(key: "videoCaptureStep.startAgain")
+        static let captureErrorNoPermission = L10n.localisedString(key: "videoCaptureStep.captureErrorNoPermission")
+        static let captureErrorCameraNotFound = L10n.localisedString(key: "videoCaptureStep.captureErrorCameraNotFound")
+        static let captureErrorNoPermissions = L10n.localisedString(key: "videoCaptureStep.captureErrorNoPermissions")
+        static let cameraUnavailable = L10n.localisedString(key: "videoCaptureStep.cameraUnavailable")
+        static let rotateDevice = L10n.localisedString(key: "videoCaptureStep.rotateDevice")
+        static let openCamera = L10n.localisedString(key: "videoCaptureStep.openCamera")
+        
+        static let cancelTitle = L10n.localisedString(key: "videoCaptureStep.cancelTitle")
+        static let nextButtonTitle = L10n.localisedString(key: "videoCaptureStep.nextButtonTitle")
+        static let skipButtonTitle = L10n.localisedString(key: "videoCaptureStep.skipButtonTitle")
+        
+    }
 }

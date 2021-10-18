@@ -18,6 +18,8 @@ public enum MWCameraStepType: String, StepType, CaseIterable {
     
     case qrCode = "io.mobileworkflow.qrcodescanner"
     case barcode = "io.mobileworkflow.barcodescanner"
+    case videoCaptureModal = "io.mobileworkflow.VideoCaptureModal"
+    case videoCapture = "io.mobileworkflow.VideoCapture"
     
     public var typeName: String {
         return self.rawValue
@@ -27,6 +29,8 @@ public enum MWCameraStepType: String, StepType, CaseIterable {
         switch self {
         case .qrCode: return MWCameraQRCodeStep.self
         case .barcode: return MWBarcodeStep.self
+        case .videoCaptureModal: return MWVideoCaptureModalStep.self
+        case .videoCapture: return MWVideoCaptureInViewStep.self
         }
     }
 }

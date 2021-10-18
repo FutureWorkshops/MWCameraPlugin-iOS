@@ -12,3 +12,17 @@
 "alert.error.message" = "تم رفض إذن الكاميرا. من فضلك ، امنح حق الوصول إلى الكاميرا في تطبيق الإعدادات.";
 "qr.label" = "ركز على رمز الاستجابة السريعة";
 "barcode.label" = "ركز على الباركود";
+
+//VideoCaptureStep
+"videoCaptureStep.startRecording" = "يسجل";
+"videoCaptureStep.stopRecording" = "إيقاف التسجيل";
+"videoCaptureStep.startAgain" = "إبدأ من جديد";
+"videoCaptureStep.captureErrorNoPermission" = "لإكمال هذه الخطوة، اسمح لهذا التطبيق بالوصول إلى الكاميرا في الإعدادات.";
+"videoCaptureStep.captureErrorCameraNotFound" = "لم يتم العثور على كاميرا.  لا يمكن إكمال هذه الخطوة.";
+"videoCaptureStep.captureErrorNoPermissions" = "لإكمال هذه الخطوة، اسمح لهذا التطبيق بالوصول إلى الكاميرا في الإعدادات.";
+"videoCaptureStep.cameraUnavailable" = "الكاميرا غير متوفرة في العرض المقسم.";
+"videoCaptureStep.rotateDevice" = "الرجاء تدوير الجهاز";
+"videoCaptureStep.openCamera" = "افتح الكاميرا";
+"videoCaptureStep.cancelTitle" = "يلغي";
+"videoCaptureStep.nextButtonTitle" = "التالي";
+"videoCaptureStep.skipButtonTitle" = "تخطي";
