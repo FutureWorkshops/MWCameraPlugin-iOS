@@ -146,7 +146,6 @@ final class MWVideoRecordingViewController: UIViewController {
             do {
                 let input = try AVCaptureDeviceInput(device: device)
                 let movieFileOutput = AVCaptureMovieFileOutput()
-//                movieFileOutput.maxRecordedDuration = CMTimeMakeWithSeconds(self.videoCaptureStep.duration, preferredTimescale: 30);
                 movieFileOutput.movieFragmentInterval = CMTime.invalid // MP4 apparently does not support fragments so after first 10 second fragment the audio gets lost, so disabling them...
                 
                 if self.captureSession?.canAddInput(input) == true && self.captureSession?.canAddOutput(movieFileOutput) == true {
