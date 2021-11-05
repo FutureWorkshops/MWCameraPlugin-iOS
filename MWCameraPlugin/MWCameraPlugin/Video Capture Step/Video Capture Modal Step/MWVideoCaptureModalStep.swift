@@ -64,7 +64,7 @@ extension MWVideoCaptureModalStep: BuildableStep {
                                   deviceCamera: stepInfo.data.content["deviceCamera"] as? String,
                                   videoOrientation: stepInfo.data.content["videoOrientation"] as? String,
                                   instructionsText: stepInfo.data.content["instructionsText"] as? String,
-                                  imageURL: stepInfo.data.content["instructionsImageURL"] as? String,
+                                  imageURL: stepInfo.data.content["imageURL"] as? String,
                                   session: stepInfo.session,
                                   services: services,
                                   theme: stepInfo.context.theme)
