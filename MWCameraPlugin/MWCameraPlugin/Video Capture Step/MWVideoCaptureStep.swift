@@ -67,4 +67,16 @@ extension BinaryContentType {
     
 }
 
+extension AVCaptureDevice.TorchMode {
+    
+    init(stringValue: String?){
+        if let stringValue = stringValue, let rawValue = Int(stringValue), let torchMode = AVCaptureDevice.TorchMode(rawValue: rawValue) {
+            self = torchMode
+        }else{
+            self = .off
+        }
+    }
+    
+}
+
 
