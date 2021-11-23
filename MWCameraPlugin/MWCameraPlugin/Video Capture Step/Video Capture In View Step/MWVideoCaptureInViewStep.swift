@@ -23,14 +23,14 @@ final class MWVideoCaptureInViewStep: MWStep, MWVideoCaptureStep {
     init(identifier: String,
          duration: Int?,
          audioMute: Bool?,
-         torchMode: Int?,
+         torchMode: String?,
          deviceCamera: String?,
          session: Session,
          services: StepServices,
          theme: Theme) {
         self.duration = TimeInterval(duration ?? 120)
         self.audioMute = audioMute ?? false
-        self.torchMode = AVCaptureDevice.TorchMode(rawValue: torchMode ?? 0) ?? .off
+        self.torchMode = AVCaptureDevice.TorchMode(stringValue: torchMode)
         self.deviceCamera = DeviceCamera(rawValue: deviceCamera ?? "") ?? .back
         self.session = session
         self.services = services
@@ -51,7 +51,7 @@ extension MWVideoCaptureInViewStep: BuildableStep {
         return MWVideoCaptureInViewStep(identifier: stepInfo.data.identifier,
                                         duration: stepInfo.data.content["duration"] as? Int,
                                         audioMute: stepInfo.data.content["audioMute"] as? Bool,
-                                        torchMode: stepInfo.data.content["torchMode"] as? Int,
+                                        torchMode: stepInfo.data.content["torchMode"] as? String,
                                         deviceCamera: stepInfo.data.content["deviceCamera"] as? String,
                                         session: stepInfo.session,
                                         services: services,
