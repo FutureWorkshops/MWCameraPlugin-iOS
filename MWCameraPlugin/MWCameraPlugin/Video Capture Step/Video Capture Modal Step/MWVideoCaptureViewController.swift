@@ -32,7 +32,10 @@ final class MWVideoCaptureViewController: MWInstructionStepViewController {
     private var fileURL: URL? {
         didSet{
             self.configureNavigationFooter()
+            
             self.playerViewController.view.isHidden = self.fileURL == nil
+            self.contentStackView.isHidden = self.fileURL != nil
+            
             if let videoFileURL = self.fileURL {
                 let item = AVPlayerItem(url: videoFileURL)
                 self.playerViewController.player = AVPlayer(playerItem: item)
@@ -54,10 +57,10 @@ final class MWVideoCaptureViewController: MWInstructionStepViewController {
         
         playerView.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints = [NSLayoutConstraint(item: playerView, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1.0, constant: 0.0),
+        let constraints = [NSLayoutConstraint(item: playerView, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0.0),
                            NSLayoutConstraint(item: playerView, attribute: .left, relatedBy: .equal, toItem: self.contentView, attribute: .left, multiplier: 1.0, constant: 0.0),
                            NSLayoutConstraint(item: playerView, attribute: .right, relatedBy: .equal, toItem: self.contentView, attribute: .right, multiplier: 1.0, constant: 0.0),
-                           NSLayoutConstraint(item: playerView, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
+                           NSLayoutConstraint(item: playerView, attribute: .height, relatedBy: .equal, toItem: self.contentView, attribute: .height, multiplier: 0.5, constant: 0.0)]
         
         NSLayoutConstraint.activate(constraints)
         
@@ -119,7 +122,7 @@ final class MWVideoCaptureViewController: MWInstructionStepViewController {
             
             self.navigationFooterConfig = NavigationFooterView.Config(
                 primaryButton: ButtonConfig(isEnabled: true, style: .primary, title: L10n.VideoCaptureStep.nextButtonTitle, action: self.goForward),
-                secondaryButton: ButtonConfig(isEnabled: true, style: .textOnly, title: L10n.VideoCaptureStep.startAgain, action: self.openCamera),
+                secondaryButton: ButtonConfig(isEnabled: true, style: .textOnly, title: L10n.VideoCaptureStep.retakeVideo, action: self.openCamera),
                 hasBlurredBackground: false
             )
         

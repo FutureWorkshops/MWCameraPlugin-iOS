@@ -14,7 +14,7 @@
 //VideoCaptureStep
 "videoCaptureStep.startRecording" = "Record";
 "videoCaptureStep.stopRecording" = "Stop Recording";
-"videoCaptureStep.startAgain" = "Start Again";
+"videoCaptureStep.retakeVideo" = "Retake Video";
 "videoCaptureStep.captureErrorNoPermission" = "In order to complete this step, allow this app access to the camera in Settings.";
 "videoCaptureStep.captureErrorCameraNotFound" = "No camera found.  This step cannot be completed.";
 "videoCaptureStep.captureErrorNoPermissions" = "In order to complete this step, allow this app access to the camera in Settings.";
