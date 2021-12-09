@@ -36,6 +36,18 @@ internal enum L10n {
         static let cancelTitle = L10n.localisedString(key: "videoCaptureStep.cancelTitle")
         static let nextButtonTitle = L10n.localisedString(key: "videoCaptureStep.nextButtonTitle")
         static let skipButtonTitle = L10n.localisedString(key: "videoCaptureStep.skipButtonTitle")
-        
+    }
+    
+    enum ImageCaptureStep {
+        static let captureImage = L10n.localisedString(key: "imageCaptureStep.captureImage")
+        static let recaptureImage = L10n.localisedString(key: "imageCaptureStep.recaptureImage")
+        static let nextButtonTitle = L10n.localisedString(key: "imageCaptureStep.nextButtonTitle")
+        static let skipButtonTitle = L10n.localisedString(key: "imageCaptureStep.skipButtonTitle")
+        static let cameraUnavailable = L10n.localisedString(key: "imageCaptureStep.cameraUnavailable")
+        static let captureErrorNoPermissions = L10n.localisedString(key: "imageCaptureStep.captureErrorNoPermissions")
+        static let captureErrorCameraNotFound = L10n.localisedString(key: "imageCaptureStep.captureErrorCameraNotFound")
+        static let captureErrorNoOutputDirectory = L10n.localisedString(key: "imageCaptureStep.captureErrorNoOutputDirectory")
+        static let captureErrorCannotWriteFile = L10n.localisedString(key: "imageCaptureStep.captureErrorCannotWriteFile")
+        static let photoLibraryNotAvailable = L10n.localisedString(key: "imageCaptureStep.photoLibraryNotAvailable")
     }
 }

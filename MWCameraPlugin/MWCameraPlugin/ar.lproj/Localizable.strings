@@ -26,3 +26,15 @@
 "videoCaptureStep.cancelTitle" = "يلغي";
 "videoCaptureStep.nextButtonTitle" = "التالي";
 "videoCaptureStep.skipButtonTitle" = "تخطي";
+
+//ImageCaptureStep
+"imageCaptureStep.captureImage" = "التقاط صورة";
+"imageCaptureStep.recaptureImage" = "إعادة التقاط الصورة";
+"imageCaptureStep.nextButtonTitle" = "التالي";
+"imageCaptureStep.skipButtonTitle" = "تخطي";
+"imageCaptureStep.cameraUnavailable" = "الكاميرا غير متوفرة في العرض المقسم.";
+"imageCaptureStep.captureErrorNoPermissions" = "لإكمال هذه الخطوة، اسمح لهذا التطبيق بالوصول إلى الكاميرا في الإعدادات.";
+"imageCaptureStep.captureErrorCameraNotFound" = "لم يتم العثور على كاميرا.  لا يمكن إكمال هذه الخطوة.";
+"imageCaptureStep.captureErrorNoOutputDirectory" = "لم يتم تحديد دليل إخراج للصور الملتقطة.";
+"imageCaptureStep.captureErrorCannotWriteFile" = "لا يمكن حفظ الصورة الملتقطة.";
+"imageCaptureStep.photoLibraryNotAvailable" = "مكتبة الصور غير متوفرة";
