@@ -25,7 +25,7 @@ internal enum L10n {
     enum VideoCaptureStep {
         static let startRecording = L10n.localisedString(key: "videoCaptureStep.startRecording")
         static let stopRecording = L10n.localisedString(key: "videoCaptureStep.stopRecording")
-        static let startAgain = L10n.localisedString(key: "videoCaptureStep.startAgain")
+        static let retakeVideo = L10n.localisedString(key: "videoCaptureStep.retakeVideo")
         static let captureErrorNoPermission = L10n.localisedString(key: "videoCaptureStep.captureErrorNoPermission")
         static let captureErrorCameraNotFound = L10n.localisedString(key: "videoCaptureStep.captureErrorCameraNotFound")
         static let captureErrorNoPermissions = L10n.localisedString(key: "videoCaptureStep.captureErrorNoPermissions")

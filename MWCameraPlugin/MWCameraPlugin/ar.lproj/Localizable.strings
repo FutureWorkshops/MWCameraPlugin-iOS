@@ -16,7 +16,7 @@
 //VideoCaptureStep
 "videoCaptureStep.startRecording" = "يسجل";
 "videoCaptureStep.stopRecording" = "إيقاف التسجيل";
-"videoCaptureStep.startAgain" = "إبدأ من جديد";
+"videoCaptureStep.retakeVideo" = "إعادة التقاط الفيديو";
 "videoCaptureStep.captureErrorNoPermission" = "لإكمال هذه الخطوة، اسمح لهذا التطبيق بالوصول إلى الكاميرا في الإعدادات.";
 "videoCaptureStep.captureErrorCameraNotFound" = "لم يتم العثور على كاميرا.  لا يمكن إكمال هذه الخطوة.";
 "videoCaptureStep.captureErrorNoPermissions" = "لإكمال هذه الخطوة، اسمح لهذا التطبيق بالوصول إلى الكاميرا في الإعدادات.";

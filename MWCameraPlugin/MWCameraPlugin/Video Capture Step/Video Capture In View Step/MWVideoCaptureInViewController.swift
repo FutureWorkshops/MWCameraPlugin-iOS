@@ -133,7 +133,7 @@ final class MWVideoCaptureInViewController: MWContentStepViewController {
             
             self.navigationFooterConfig = NavigationFooterView.Config(
                 primaryButton: ButtonConfig(isEnabled: true, style: .primary, title: L10n.VideoCaptureStep.nextButtonTitle, action: self.goForward),
-                secondaryButton: ButtonConfig(isEnabled: true, style: .textOnly, title: L10n.VideoCaptureStep.startAgain, action: self.startAgain),
+                secondaryButton: ButtonConfig(isEnabled: true, style: .textOnly, title: L10n.VideoCaptureStep.retakeVideo, action: self.startAgain),
                 hasBlurredBackground: false
             )
         
