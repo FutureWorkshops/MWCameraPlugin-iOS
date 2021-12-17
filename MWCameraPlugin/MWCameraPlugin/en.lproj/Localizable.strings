@@ -24,3 +24,15 @@
 "videoCaptureStep.cancelTitle" = "Cancel";
 "videoCaptureStep.nextButtonTitle" = "Next";
 "videoCaptureStep.skipButtonTitle" = "Skip";
+
+//ImageCaptureStep
+"imageCaptureStep.captureImage" = "Capture Image";
+"imageCaptureStep.recaptureImage" = "Recapture Image";
+"imageCaptureStep.nextButtonTitle" = "Next";
+"imageCaptureStep.skipButtonTitle" = "Skip";
+"imageCaptureStep.cameraUnavailable" = "Camera not available in split screen.";
+"imageCaptureStep.captureErrorNoPermissions" = "In order to complete this step, allow this app access to the camera in Settings.";
+"imageCaptureStep.captureErrorCameraNotFound" = "No camera found.  This step cannot be completed.";
+"imageCaptureStep.captureErrorNoOutputDirectory" = "No output directory was specified for captured images.";
+"imageCaptureStep.captureErrorCannotWriteFile" = "The captured image could not be saved.";
+"imageCaptureStep.photoLibraryNotAvailable" = "Photo Library is not available";
