@@ -40,8 +40,6 @@ extension MWVideoCaptureStep {
                                     fileIdentifier: BinaryContentType.getExtension(type: BinaryContentType.Video.mp4) ?? self.identifier,
                                     fileURL: fileURL,
                                     contentType: BinaryContentType.Video.mp4)
-        fileResult.startDate = Date()
-        fileResult.endDate = Date()
         return fileResult
     }
     

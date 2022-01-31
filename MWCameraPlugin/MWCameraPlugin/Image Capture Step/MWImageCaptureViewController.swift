@@ -342,8 +342,6 @@ final class MWImageCaptureViewController: MWContentStepViewController, UINavigat
                                         fileIdentifier: self.imageDataExtension,
                                         fileURL: fileURL,
                                         contentType: BinaryContentType.Image.jpeg)
-            fileResult.startDate = Date()
-            fileResult.endDate = Date()
             self.addStepResult(fileResult)
         }
         

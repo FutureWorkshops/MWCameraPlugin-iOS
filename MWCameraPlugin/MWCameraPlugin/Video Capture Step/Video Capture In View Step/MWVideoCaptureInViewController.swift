@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AVFoundation
+import AVKit
 import MobileWorkflowCore
 
 final class MWVideoCaptureInViewController: MWContentStepViewController {
