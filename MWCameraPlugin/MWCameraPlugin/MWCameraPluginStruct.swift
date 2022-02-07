@@ -8,7 +8,7 @@
 import Foundation
 import MobileWorkflowCore
 
-public struct MWCameraPlugin: Plugin {
+public struct MWCameraPluginStruct: Plugin {
     public static var allStepsTypes: [StepType] {
         return MWCameraStepType.allCases
     }
