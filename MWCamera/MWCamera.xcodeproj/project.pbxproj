@@ -328,7 +328,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MWCamera-MWCamera/Pods-MWCamera-MWCamera-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/MobileWorkflowCore/MobileWorkflowCore.framework/MobileWorkflowCore",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/MobileWorkflow/Core/MobileWorkflowCore.framework/MobileWorkflowCore",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
