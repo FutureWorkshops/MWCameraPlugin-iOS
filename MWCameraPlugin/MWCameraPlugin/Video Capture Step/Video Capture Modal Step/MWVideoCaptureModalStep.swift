@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import MobileWorkflowCore
+import UIKit
 
 final class MWVideoCaptureModalStep: MWStep, InstructionStep, MWVideoCaptureStep {
     

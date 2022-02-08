@@ -25,10 +25,6 @@ final class BarcodeResult: StepResult, Codable {
 }
 
 extension BarcodeResult: ValueProvider {
-    var content: [AnyHashable: Codable] {
-        return [self.identifier: self.codeFound]
-    }
-    
     func fetchValue(for path: String) -> Any? {
         return self.codeFound
     }

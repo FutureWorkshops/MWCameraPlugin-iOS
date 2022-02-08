@@ -7,7 +7,7 @@
 
 import UIKit
 import MobileWorkflowCore
-import AVFAudio
+import AVKit
 
 fileprivate let PreviewImagePadding: CGFloat = 20.0
 

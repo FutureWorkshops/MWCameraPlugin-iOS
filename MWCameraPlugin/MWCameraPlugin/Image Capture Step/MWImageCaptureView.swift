@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 import MobileWorkflowCore
 
 protocol MWImageCaptureViewDelegate : AnyObject {
