@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 import MobileWorkflowCore
 
-protocol MWVideoCaptureStep: Step {
+public protocol MWVideoCaptureStep: Step {
     var duration: TimeInterval { get }
     var audioMute: Bool { get }
     var torchMode: AVCaptureDevice.TorchMode { get }
@@ -17,19 +17,19 @@ protocol MWVideoCaptureStep: Step {
     var videoOrientation: VideoOrientation { get }
 }
 
-enum VideoOrientation : String {
+public enum VideoOrientation : String {
     case portrait = "portrait"
     case landscape = "landscape"
     case any = "any"
 }
 
-enum DeviceCamera : String {
+public enum DeviceCamera : String {
     case any = "any"
     case back = "back"
     case front = "front"
 }
 
-extension MWVideoCaptureStep {
+public extension MWVideoCaptureStep {
     
     var fileName: String {
         return "\(self.identifier).mp4"

@@ -149,15 +149,15 @@ final class MWVideoCaptureViewController: MWInstructionStepViewController {
 
 extension MWVideoCaptureViewController : MWVideoRecordingViewControllerDelegate {
     
-    func stateDidChange(isRecording: Bool){
+    public func stateDidChange(isRecording: Bool) {
         
     }
     
-    func cancel(){
+    public func cancel() {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func didFinishRecordingTo(videoFileURL: URL?) {
+    public func didFinishRecordingTo(videoFileURL: URL?) {
         self.dismiss(animated: true, completion: nil)
         
         self.fileURL = videoFileURL
