@@ -9,15 +9,15 @@ import UIKit
 import AVFoundation
 import MobileWorkflowCore
 
-protocol MWVideoRecordingViewControllerDelegate: AnyObject {
+public protocol MWVideoRecordingViewControllerDelegate: AnyObject {
     func cancel()
     func didFinishRecordingTo(videoFileURL: URL?)
     func stateDidChange(isRecording: Bool)
 }
 
-final class MWVideoRecordingViewController: UIViewController {
+public final class MWVideoRecordingViewController: UIViewController {
     
-    weak var delegate: MWVideoRecordingViewControllerDelegate?
+    public weak var delegate: MWVideoRecordingViewControllerDelegate?
     
     private let videoRecordingView: MWVideoRecordingView
     private let sessionQueue: DispatchQueue = DispatchQueue(label: "session queue")
@@ -47,7 +47,7 @@ final class MWVideoRecordingViewController: UIViewController {
     private lazy var devicePosition : AVCaptureDevice.Position = self.videoCaptureStep.deviceCamera.position
     private var didCancel: Bool = false
     
-    init(videoCaptureStep: MWVideoCaptureStep, outputPath: URL?, showControls: Bool = true) {
+    public init(videoCaptureStep: MWVideoCaptureStep, outputPath: URL?, showControls: Bool = true) {
         self.videoCaptureStep = videoCaptureStep
         self.outputPath = outputPath
         
@@ -66,7 +66,7 @@ final class MWVideoRecordingViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .black
@@ -75,7 +75,7 @@ final class MWVideoRecordingViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let fileURL = self.fileURL {
@@ -88,7 +88,7 @@ final class MWVideoRecordingViewController: UIViewController {
     
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
         
         if self.captureSession?.isRunning == true {
             self.sessionQueue.async {
@@ -331,11 +331,11 @@ extension MWVideoRecordingViewController : MWVideoRecordingViewDelegate {
 
 extension MWVideoRecordingViewController : AVCaptureFileOutputRecordingDelegate {
     
-    func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
+    public func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
         self.recording = true
     }
     
-    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+    public func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         
         self.recording = false
         

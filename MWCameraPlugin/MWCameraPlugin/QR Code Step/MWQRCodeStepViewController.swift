@@ -20,7 +20,7 @@ public class MWQRCodeStepViewController: MWStepViewController {
         
         let qrScanner = _MWQRCodeStepViewController() { [weak self] codeFound in
             guard let self = self else { return }
-            let result = BarcodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
+            let result = QRCodeResult(identifier: self.qrCodeStep.identifier, codeFound: codeFound)
             self.addStepResult(result)
             self.goForward()
         }

@@ -17,8 +17,6 @@ public struct MWCameraPluginStruct: Plugin {
 public enum MWCameraStepType: String, StepType, CaseIterable {
     
     case qrCode = "io.mobileworkflow.qrcodescanner"
-    case barcode = "io.mobileworkflow.barcodescanner"
-    case videoCaptureModal = "io.mobileworkflow.VideoCaptureModal"
     case videoCapture = "io.mobileworkflow.VideoCapture"
     case imageCapture = "io.mobileworkflow.ImageCapture"
     
@@ -29,8 +27,6 @@ public enum MWCameraStepType: String, StepType, CaseIterable {
     public var stepClass: BuildableStep.Type {
         switch self {
         case .qrCode: return MWCameraQRCodeStep.self
-        case .barcode: return MWBarcodeStep.self
-        case .videoCaptureModal: return MWVideoCaptureModalStep.self
         case .videoCapture: return MWVideoCaptureInViewStep.self
         case .imageCapture: return MWImageCaptureStep.self
         }

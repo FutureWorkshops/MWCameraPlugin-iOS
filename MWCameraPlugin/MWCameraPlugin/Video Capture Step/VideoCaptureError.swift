@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum VideoCaptureError: LocalizedError {
+public enum VideoCaptureError: LocalizedError {
     case captureErrorCameraNotFound
     case captureErrorNoPermission
     case cameraUnavailable
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .captureErrorCameraNotFound:
             return L10n.VideoCaptureStep.captureErrorCameraNotFound
