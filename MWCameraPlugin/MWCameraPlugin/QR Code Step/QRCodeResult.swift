@@ -23,3 +23,20 @@ final class QRCodeResult: StepResult, Codable {
         try container.encode(self.codeFound)
     }
 }
+
+extension QRCodeResult: ValueProvider {
+    func fetchValue(for path: String) -> Any? {
+        return self.codeFound
+    }
+    
+    func fetchProvider(for path: String) -> ValueProvider? {
+        return self.codeFound
+    }
+}
+
+extension QRCodeResult: JSONRepresentable {
+    var jsonContent: String? {
+        guard let data = try? JSONEncoder().encode(self) else { return nil }
+        return String(data: data, encoding: .utf8)
+    }
+}
