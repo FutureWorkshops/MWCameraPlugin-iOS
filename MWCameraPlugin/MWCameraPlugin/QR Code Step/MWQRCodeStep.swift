@@ -24,6 +24,9 @@ public class MWCameraQRCodeStep: MWStep {
 }
 
 extension MWCameraQRCodeStep: BuildableStep {
+    
+    public static var mandatoryCodingPaths: [CodingKey] { [] }
+    
     public static func build(stepInfo: StepInfo, services: StepServices) throws -> Step {
         return MWCameraQRCodeStep(identifier: stepInfo.data.identifier)
     }

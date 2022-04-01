@@ -47,6 +47,9 @@ final class MWImageCaptureStep: MWStep {
 }
 
 extension MWImageCaptureStep: BuildableStep {
+    
+    public static var mandatoryCodingPaths: [CodingKey] { [] }
+    
     static func build(stepInfo: StepInfo, services: StepServices) throws -> Step {
         
         return MWImageCaptureStep(identifier: stepInfo.data.identifier,
