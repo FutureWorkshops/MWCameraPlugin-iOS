@@ -47,6 +47,9 @@ final class MWVideoCaptureInViewStep: MWStep, MWVideoCaptureStep {
 }
 
 extension MWVideoCaptureInViewStep: BuildableStep {
+    
+    static var mandatoryCodingPaths: [CodingKey] { [] }
+    
     static func build(stepInfo: StepInfo, services: StepServices) throws -> Step {
         return MWVideoCaptureInViewStep(identifier: stepInfo.data.identifier,
                                         duration: stepInfo.data.content["duration"] as? Int,

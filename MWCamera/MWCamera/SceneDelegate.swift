@@ -6,6 +6,7 @@
 //  Copyright © 2020 Future Workshops. All rights reserved.
 //
 
+import UIKit
 import MobileWorkflowCore
 import MWCameraPlugin
 
@@ -13,7 +14,7 @@ class SceneDelegate: MWSceneDelegate {
     
     override func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        self.dependencies.plugins = [MWCameraPlugin.self]
+        self.dependencies.plugins = [MWCameraPluginStruct.self]
         
         super.scene(scene, willConnectTo: session, options: connectionOptions)
     }
