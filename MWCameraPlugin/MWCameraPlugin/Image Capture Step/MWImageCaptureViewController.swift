@@ -194,8 +194,8 @@ final class MWImageCaptureViewController: MWContentStepViewController, UINavigat
         
         guard let imageUrl = self.imageCaptureStep.imageURL, self.imageCaptureView.templateImage == nil else {return}
         
-        self.templateImageLoad = self.imageCaptureStep.services.imageLoadingService.asyncLoad(image: imageUrl, session: self.imageCaptureStep.session) { [weak self] in
-            self?.imageCaptureView.templateImage = $0
+        self.templateImageLoad = self.imageCaptureStep.services.imageLoadingService.load(image: imageUrl, session: self.imageCaptureStep.session) { [weak self] result in
+            self?.imageCaptureView.templateImage = result.image
             self?.templateImageLoad = nil
         }
         
