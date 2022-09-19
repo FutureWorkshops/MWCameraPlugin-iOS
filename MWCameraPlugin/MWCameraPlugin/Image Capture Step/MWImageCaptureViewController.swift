@@ -8,8 +8,6 @@
 import UIKit
 import MobileWorkflowCore
 import AVFoundation
-import Combine
-
 final class MWImageCaptureViewController: MWContentStepViewController, UINavigationControllerDelegate {
 
     private lazy var imageCaptureView : MWImageCaptureView = {
@@ -22,7 +20,7 @@ final class MWImageCaptureViewController: MWContentStepViewController, UINavigat
     private lazy var sessionQueue = DispatchQueue(label: "session queue")
     private var captureSession: AVCaptureSession?
     private var photoOutput: AVCapturePhotoOutput?
-    private var templateImageLoad: AnyCancellable?
+    private var templateImageLoad: Task<(), Never>?
     private var capturedImageData: Data? {
         didSet{
 
@@ -194,9 +192,10 @@ final class MWImageCaptureViewController: MWContentStepViewController, UINavigat
         
         guard let imageUrl = self.imageCaptureStep.imageURL, self.imageCaptureView.templateImage == nil else {return}
         
-        self.templateImageLoad = self.imageCaptureStep.services.imageLoadingService.load(image: imageUrl, session: self.imageCaptureStep.session) { [weak self] result in
-            self?.imageCaptureView.templateImage = result.image
-            self?.templateImageLoad = nil
+        self.templateImageLoad = Task {
+            let image = await self.imageCaptureStep.services.imageLoadingService.getImage(imageUrl, session: self.imageCaptureStep.session)
+            self.imageCaptureView.templateImage = image
+            self.templateImageLoad = nil
         }
         
     }

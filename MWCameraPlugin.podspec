@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                  = 'MWCameraPlugin'
-    s.version               = '0.2.5'
+    s.version               = '0.3.0'
     s.summary               = 'Camera plugin for MobileWorkflow on iOS.'
     s.description           = <<-DESC
     Camera plugin for MobileWorkflow on iOS, containg camera capture related steps:
@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
     s.source                = { :git => 'https://github.com/FutureWorkshops/MWCameraPlugin-iOS.git', :tag => "#{s.version}" }
     s.platform              = :ios
     s.swift_version         = '5'
-    s.ios.deployment_target = '13.0'
+    s.ios.deployment_target = '15.0'
 	s.default_subspecs      = 'Core'
 	
     s.subspec 'Core' do |cs|
-        cs.dependency            'MobileWorkflow', '~> 2.0.3'
+        cs.dependency            'MobileWorkflow', '~> 2.1.0'
         cs.source_files          = 'MWCameraPlugin/MWCameraPlugin/**/*.swift'
 	cs.resources		 = ['MWCameraPlugin/MWCameraPlugin/**/*.strings']
     end
