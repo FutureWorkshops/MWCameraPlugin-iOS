@@ -25,6 +25,7 @@ final class MWImageCaptureStep: MWStep {
          devicePosition: String?,
          compressionQuality: CGFloat?,
          showGalleryOption: Bool?,
+         isOptional: Bool?,
          session: Session,
          services: StepServices,
          theme: Theme) {
@@ -34,7 +35,11 @@ final class MWImageCaptureStep: MWStep {
         self.showGalleryOption = showGalleryOption ?? false
         self.session = session
         self.services = services
-        super.init(identifier: identifier, theme: theme)
+        super.init(
+            identifier: identifier,
+            isOptional: isOptional ?? false,
+            theme: theme
+        )
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -57,6 +62,7 @@ extension MWImageCaptureStep: BuildableStep {
                                   devicePosition: stepInfo.data.content["devicePosition"] as? String,
                                   compressionQuality: stepInfo.data.content["imageQuality"] as? CGFloat,
                                   showGalleryOption: stepInfo.data.content["showGalleryOption"] as? Bool,
+                                  isOptional: stepInfo.data.content["optional"] as? Bool,
                                   session: stepInfo.session,
                                   services: services,
                                   theme: stepInfo.context.theme)
