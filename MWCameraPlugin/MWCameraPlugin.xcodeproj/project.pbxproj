@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021FEA5DD8BDFB9C8C2D18E5 /* MWImageCaptureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A539D52979F4E859A892ED /* MWImageCaptureError.swift */; };
-		08334259954FB5CD9C54A587 /* MWQRCodeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5FCB7F81C7AB8616A6496 /* MWQRCodeStep.swift */; };
-		1502FA1B0A1A96E43B00F331 /* MWImageCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B294ECB2CB5E3C8C234FD /* MWImageCaptureView.swift */; };
+		013867F93D01C8777CCFC16D /* VideoCaptureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C3C326270DA39C1D6AEAA /* VideoCaptureError.swift */; };
+		09A66CBC304CF729BC0E66EF /* QRCodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFFAE7DFF464119929B7B42 /* QRCodeResult.swift */; };
+		1378458C082979093C5AEA48 /* MWImageCaptureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8AED1E1240CA6D5073674 /* MWImageCaptureError.swift */; };
 		181326FD86A211AAA0E0FDBA /* Pods_MWCamera_MWCameraPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D4D0FB31FC297041608D6F /* Pods_MWCamera_MWCameraPlugin.framework */; };
-		3683867C28103CD700E1959C /* MWVideoCaptureInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683866E28103CD700E1959C /* MWVideoCaptureInViewController.swift */; };
-		3683867D28103CD700E1959C /* MWVideoCaptureInViewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683866F28103CD700E1959C /* MWVideoCaptureInViewStep.swift */; };
-		3683867E28103CD700E1959C /* MWVideoRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683867028103CD700E1959C /* MWVideoRecordingView.swift */; };
-		3683867F28103CD700E1959C /* MWVideoCaptureCameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683867128103CD700E1959C /* MWVideoCaptureCameraPreviewView.swift */; };
-		3683868028103CD700E1959C /* MWVideoRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683867228103CD700E1959C /* MWVideoRecordingViewController.swift */; };
-		3683868128103CD700E1959C /* MWRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683867328103CD700E1959C /* MWRecordButton.swift */; };
-		3683868228103CD700E1959C /* MWVideoCaptureStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683867428103CD700E1959C /* MWVideoCaptureStep.swift */; };
-		3683868328103CD700E1959C /* VideoCaptureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683867528103CD700E1959C /* VideoCaptureError.swift */; };
-		3683868728103D0B00E1959C /* QRCodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3683868628103D0B00E1959C /* QRCodeResult.swift */; };
+		1AF5AFD611064F1BE0C2F957 /* MWQRCodeStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EF496C64B9844A2BDE736 /* MWQRCodeStepViewController.swift */; };
+		1E8EB12B1DCE60A531F4BAF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4242F0F18DA5B8F1C93E9D64 /* Localizable.strings */; };
+		3B51D3CADB67D3C324EBCAC2 /* MWRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE884F60146C6AF5C4DF976 /* MWRecordButton.swift */; };
+		506BD9EEC1DAAA76FDEEF000 /* MWCameraPluginStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C56685D82773F7324FA3FD /* MWCameraPluginStruct.swift */; };
 		52B3F98B6A5EE208D5E380CA /* Pods_MWCameraPluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */; };
-		7A916E3A83F2432C3A70C699 /* MWCameraPluginStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03553D681506B05F84F44DCF /* MWCameraPluginStruct.swift */; };
-		8E468EC1E39D04D6E22E3337 /* MWQRCodeStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFFDDB2F5632AB381A4D8FF /* MWQRCodeStepViewController.swift */; };
-		9267F8716E9C59885384642F /* MWImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D085E48B85B8A9EB60BDA5D /* MWImageCaptureViewController.swift */; };
-		A3E9B00A54AB0FD0B1772832 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E302B972D773D8ABF514A2F /* Localizable.strings */; };
-		A78A300C440A3FC753E82938 /* MWImageCaptureCameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DFEFF23A0BF849C26AC1F /* MWImageCaptureCameraPreviewView.swift */; };
-		AF8C186B40E7AB07491D4D3A /* MWImageCaptureStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D918C373439C6B18EB930 /* MWImageCaptureStep.swift */; };
+		6BF1E23642DE8E8BC7D37F40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4EEC55998E8F95E872C278B /* Localizable.strings */; };
+		72870C1947B6944561DB3D14 /* MWVideoCaptureInViewStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263134C1EECC1B955219241 /* MWVideoCaptureInViewStep.swift */; };
+		7AB47F5395A8019FB56736CE /* MWVideoRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB5E9D83FED75840C63DED /* MWVideoRecordingViewController.swift */; };
+		7E8DB4029C4A1487B3A35AC3 /* MWImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79229C1AA9D62680A0EB6828 /* MWImageCaptureViewController.swift */; };
+		A9B76657C7E2C1DA069C72C4 /* MWVideoCaptureInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6202E7DC49B24272D2AD7362 /* MWVideoCaptureInViewController.swift */; };
+		ACCA01EF8D8302CDC45A7DA9 /* MWVideoCaptureCameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60583008C7BA98ABD7B8E352 /* MWVideoCaptureCameraPreviewView.swift */; };
 		B18A496E2577AA4F002F3FD4 /* MWCameraPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18A49642577AA4E002F3FD4 /* MWCameraPlugin.framework */; };
 		B18A49732577AA4F002F3FD4 /* MWCameraPluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18A49722577AA4F002F3FD4 /* MWCameraPluginTests.swift */; };
-		B18A49752577AA4F002F3FD4 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
-		DF874DE6E4F349C3E277679C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C90D1219FC3C0028EB7B035 /* Localizable.strings */; };
-		F04867F8CF94569E8CA90358 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = D643E5D195B964FADA14BE0E /* L10n.swift */; };
+		B18A49752577AA4F002F3FD4 /* BuildFile in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
+		B61A5BFD1F5F45D671C76052 /* MWImageCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DB56B8F9E061A50E98F1B /* MWImageCaptureView.swift */; };
+		B91E14847740248A2ED4255A /* MWQRCodeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDD72A73CA1328A6F6A11B /* MWQRCodeStep.swift */; };
+		D6C624FCB87EA6C00850CE49 /* MWVideoCaptureStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98D5442A1A5526C96A4DCE /* MWVideoCaptureStep.swift */; };
+		D744B0C5EB738EE0DFA0C63E /* MWVideoRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FD63321A073AF305C4E45 /* MWVideoRecordingView.swift */; };
+		ED27F8A0D2B9B595A263A084 /* MWImageCaptureCameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFC45952E0DE18C7F7BB73B /* MWImageCaptureCameraPreviewView.swift */; };
+		F01F3833B3DC9BF8F061EF17 /* MWImageCaptureStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F31CD772277091AB09F81C /* MWImageCaptureStep.swift */; };
+		F0C564ED2FB264EC8E78A7DF /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47157F124CEA9A7DA3A0CBE8 /* L10n.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,38 +45,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03553D681506B05F84F44DCF /* MWCameraPluginStruct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWCameraPluginStruct.swift; sourceTree = "<group>"; };
 		0B9FF0B5127521888436108A /* Pods-MWCameraPluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCameraPluginTests.release.xcconfig"; path = "Target Support Files/Pods-MWCameraPluginTests/Pods-MWCameraPluginTests.release.xcconfig"; sourceTree = "<group>"; };
-		0E302B972D773D8ABF514A2F /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12AD656C79FE984C1E211D32 /* Pods-MWCamera-MWCameraPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera-MWCameraPlugin.release.xcconfig"; path = "Target Support Files/Pods-MWCamera-MWCameraPlugin/Pods-MWCamera-MWCameraPlugin.release.xcconfig"; sourceTree = "<group>"; };
-		1CC5FCB7F81C7AB8616A6496 /* MWQRCodeStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWQRCodeStep.swift; sourceTree = "<group>"; };
+		13C56685D82773F7324FA3FD /* MWCameraPluginStruct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWCameraPluginStruct.swift; sourceTree = "<group>"; };
 		3683866E28103CD700E1959C /* MWVideoCaptureInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureInViewController.swift; sourceTree = "<group>"; };
 		3683866F28103CD700E1959C /* MWVideoCaptureInViewStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureInViewStep.swift; sourceTree = "<group>"; };
-		3683867028103CD700E1959C /* MWVideoRecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWVideoRecordingView.swift; sourceTree = "<group>"; };
-		3683867128103CD700E1959C /* MWVideoCaptureCameraPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureCameraPreviewView.swift; sourceTree = "<group>"; };
-		3683867228103CD700E1959C /* MWVideoRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWVideoRecordingViewController.swift; sourceTree = "<group>"; };
-		3683867328103CD700E1959C /* MWRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWRecordButton.swift; sourceTree = "<group>"; };
-		3683867428103CD700E1959C /* MWVideoCaptureStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureStep.swift; sourceTree = "<group>"; };
-		3683867528103CD700E1959C /* VideoCaptureError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCaptureError.swift; sourceTree = "<group>"; };
-		3683868628103D0B00E1959C /* QRCodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeResult.swift; sourceTree = "<group>"; };
-		386B294ECB2CB5E3C8C234FD /* MWImageCaptureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureView.swift; sourceTree = "<group>"; };
-		446D918C373439C6B18EB930 /* MWImageCaptureStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureStep.swift; sourceTree = "<group>"; };
-		4D085E48B85B8A9EB60BDA5D /* MWImageCaptureViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureViewController.swift; sourceTree = "<group>"; };
+		4242F0F18DA5B8F1C93E9D64 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		47157F124CEA9A7DA3A0CBE8 /* L10n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		52CA5BBDCCC2599F88C6671B /* Pods-MWCamera-MWCameraPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCamera-MWCameraPlugin.debug.xcconfig"; path = "Target Support Files/Pods-MWCamera-MWCameraPlugin/Pods-MWCamera-MWCameraPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+		52D945C8BE20A9AA9BCF34AB /* MWCameraPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MWCameraPlugin.h; sourceTree = "<group>"; };
 		5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCameraPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C90D1219FC3C0028EB7B035 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		77A539D52979F4E859A892ED /* MWImageCaptureError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureError.swift; sourceTree = "<group>"; };
-		794DFEFF23A0BF849C26AC1F /* MWImageCaptureCameraPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureCameraPreviewView.swift; sourceTree = "<group>"; };
-		7BFFDDB2F5632AB381A4D8FF /* MWQRCodeStepViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWQRCodeStepViewController.swift; sourceTree = "<group>"; };
-		97B2216B0370A20F1F1F3C2E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60583008C7BA98ABD7B8E352 /* MWVideoCaptureCameraPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureCameraPreviewView.swift; sourceTree = "<group>"; };
+		6202E7DC49B24272D2AD7362 /* MWVideoCaptureInViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureInViewController.swift; sourceTree = "<group>"; };
+		778C3C326270DA39C1D6AEAA /* VideoCaptureError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VideoCaptureError.swift; sourceTree = "<group>"; };
+		79229C1AA9D62680A0EB6828 /* MWImageCaptureViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureViewController.swift; sourceTree = "<group>"; };
+		7EFC45952E0DE18C7F7BB73B /* MWImageCaptureCameraPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureCameraPreviewView.swift; sourceTree = "<group>"; };
+		8DFFAE7DFF464119929B7B42 /* QRCodeResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRCodeResult.swift; sourceTree = "<group>"; };
+		8FFDD72A73CA1328A6F6A11B /* MWQRCodeStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWQRCodeStep.swift; sourceTree = "<group>"; };
+		97F31CD772277091AB09F81C /* MWImageCaptureStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureStep.swift; sourceTree = "<group>"; };
+		ABE884F60146C6AF5C4DF976 /* MWRecordButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWRecordButton.swift; sourceTree = "<group>"; };
 		B18A49642577AA4E002F3FD4 /* MWCameraPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MWCameraPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18A496D2577AA4F002F3FD4 /* MWCameraPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWCameraPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18A49722577AA4F002F3FD4 /* MWCameraPluginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWCameraPluginTests.swift; sourceTree = "<group>"; };
 		B18A49742577AA4F002F3FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1D4D0FB31FC297041608D6F /* Pods_MWCamera_MWCameraPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWCamera_MWCameraPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D643E5D195B964FADA14BE0E /* L10n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
-		ECF7FAE5D0669CF109FA1245 /* MWCameraPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MWCameraPlugin.h; sourceTree = "<group>"; };
+		B4EEC55998E8F95E872C278B /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BBFB5E9D83FED75840C63DED /* MWVideoRecordingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWVideoRecordingViewController.swift; sourceTree = "<group>"; };
+		BD4EF496C64B9844A2BDE736 /* MWQRCodeStepViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWQRCodeStepViewController.swift; sourceTree = "<group>"; };
+		C263134C1EECC1B955219241 /* MWVideoCaptureInViewStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureInViewStep.swift; sourceTree = "<group>"; };
+		D7B8AED1E1240CA6D5073674 /* MWImageCaptureError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureError.swift; sourceTree = "<group>"; };
+		DB98D5442A1A5526C96A4DCE /* MWVideoCaptureStep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWVideoCaptureStep.swift; sourceTree = "<group>"; };
+		EF62A74DEEC9C13FE06B4037 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CBE9105CCAE5E898F650BE /* Pods-MWCameraPluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWCameraPluginTests.debug.xcconfig"; path = "Target Support Files/Pods-MWCameraPluginTests/Pods-MWCameraPluginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F69DB56B8F9E061A50E98F1B /* MWImageCaptureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWImageCaptureView.swift; sourceTree = "<group>"; };
+		F70FD63321A073AF305C4E45 /* MWVideoRecordingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MWVideoRecordingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,27 +102,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3683866C28103CD700E1959C /* Video Capture Step */ = {
+		0194A5D3FBD4D79252A417BA /* Image Capture Step */ = {
 			isa = PBXGroup;
 			children = (
-				3683866D28103CD700E1959C /* Video Capture In View Step */,
-				3683867028103CD700E1959C /* MWVideoRecordingView.swift */,
-				3683867128103CD700E1959C /* MWVideoCaptureCameraPreviewView.swift */,
-				3683867228103CD700E1959C /* MWVideoRecordingViewController.swift */,
-				3683867328103CD700E1959C /* MWRecordButton.swift */,
-				3683867428103CD700E1959C /* MWVideoCaptureStep.swift */,
-				3683867528103CD700E1959C /* VideoCaptureError.swift */,
+				7EFC45952E0DE18C7F7BB73B /* MWImageCaptureCameraPreviewView.swift */,
+				F69DB56B8F9E061A50E98F1B /* MWImageCaptureView.swift */,
+				79229C1AA9D62680A0EB6828 /* MWImageCaptureViewController.swift */,
+				D7B8AED1E1240CA6D5073674 /* MWImageCaptureError.swift */,
+				97F31CD772277091AB09F81C /* MWImageCaptureStep.swift */,
 			);
-			path = "Video Capture Step";
+			name = "Image Capture Step";
+			path = "Image Capture Step";
 			sourceTree = "<group>";
 		};
-		3683866D28103CD700E1959C /* Video Capture In View Step */ = {
+		2967A959A2259F45464C747B /* Video Capture Step */ = {
 			isa = PBXGroup;
 			children = (
-				3683866E28103CD700E1959C /* MWVideoCaptureInViewController.swift */,
-				3683866F28103CD700E1959C /* MWVideoCaptureInViewStep.swift */,
+				A32D9B988F0545A4499BB330 /* Video Capture In View Step */,
+				F70FD63321A073AF305C4E45 /* MWVideoRecordingView.swift */,
+				60583008C7BA98ABD7B8E352 /* MWVideoCaptureCameraPreviewView.swift */,
+				BBFB5E9D83FED75840C63DED /* MWVideoRecordingViewController.swift */,
+				ABE884F60146C6AF5C4DF976 /* MWRecordButton.swift */,
+				DB98D5442A1A5526C96A4DCE /* MWVideoCaptureStep.swift */,
+				778C3C326270DA39C1D6AEAA /* VideoCaptureError.swift */,
 			);
-			path = "Video Capture In View Step";
+			name = "Video Capture Step";
+			path = "Video Capture Step";
 			sourceTree = "<group>";
 		};
 		53821F0D6F73D39DA1E9C889 /* Pods */ = {
@@ -135,18 +142,6 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		88F2C8D77ADA6D37D4C4B0AD /* Image Capture Step */ = {
-			isa = PBXGroup;
-			children = (
-				794DFEFF23A0BF849C26AC1F /* MWImageCaptureCameraPreviewView.swift */,
-				386B294ECB2CB5E3C8C234FD /* MWImageCaptureView.swift */,
-				4D085E48B85B8A9EB60BDA5D /* MWImageCaptureViewController.swift */,
-				77A539D52979F4E859A892ED /* MWImageCaptureError.swift */,
-				446D918C373439C6B18EB930 /* MWImageCaptureStep.swift */,
-			);
-			path = "Image Capture Step";
-			sourceTree = "<group>";
-		};
 		9A6B3FBB9ADA9B9BF1FBA5B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +149,16 @@
 				5387CE686F0A93BAFB5E1E82 /* Pods_MWCameraPluginTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A32D9B988F0545A4499BB330 /* Video Capture In View Step */ = {
+			isa = PBXGroup;
+			children = (
+				6202E7DC49B24272D2AD7362 /* MWVideoCaptureInViewController.swift */,
+				C263134C1EECC1B955219241 /* MWVideoCaptureInViewStep.swift */,
+			);
+			name = "Video Capture In View Step";
+			path = "Video Capture In View Step";
 			sourceTree = "<group>";
 		};
 		B18A495A2577AA4E002F3FD4 = {
@@ -179,14 +184,14 @@
 		B18A49662577AA4E002F3FD4 /* MWCameraPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				3683866C28103CD700E1959C /* Video Capture Step */,
-				88F2C8D77ADA6D37D4C4B0AD /* Image Capture Step */,
-				FD7C09D2FD11CB26FE6139A3 /* QR Code Step */,
-				43F39C9F94EAB52357FEAEB0 /* Localizable.strings */,
-				D643E5D195B964FADA14BE0E /* L10n.swift */,
-				03553D681506B05F84F44DCF /* MWCameraPluginStruct.swift */,
-				ECF7FAE5D0669CF109FA1245 /* MWCameraPlugin.h */,
-				97B2216B0370A20F1F1F3C2E /* Info.plist */,
+				2967A959A2259F45464C747B /* Video Capture Step */,
+				55DF417FCF00AB16DFCC8036 /* Localizable.strings */,
+				47157F124CEA9A7DA3A0CBE8 /* L10n.swift */,
+				13C56685D82773F7324FA3FD /* MWCameraPluginStruct.swift */,
+				0194A5D3FBD4D79252A417BA /* Image Capture Step */,
+				52D945C8BE20A9AA9BCF34AB /* MWCameraPlugin.h */,
+				B42B204FE74CD8C3B6B95135 /* QR Code Step */,
+				EF62A74DEEC9C13FE06B4037 /* Info.plist */,
 			);
 			path = MWCameraPlugin;
 			sourceTree = "<group>";
@@ -200,13 +205,14 @@
 			path = MWCameraPluginTests;
 			sourceTree = "<group>";
 		};
-		FD7C09D2FD11CB26FE6139A3 /* QR Code Step */ = {
+		B42B204FE74CD8C3B6B95135 /* QR Code Step */ = {
 			isa = PBXGroup;
 			children = (
-				3683868628103D0B00E1959C /* QRCodeResult.swift */,
-				1CC5FCB7F81C7AB8616A6496 /* MWQRCodeStep.swift */,
-				7BFFDDB2F5632AB381A4D8FF /* MWQRCodeStepViewController.swift */,
+				8DFFAE7DFF464119929B7B42 /* QRCodeResult.swift */,
+				8FFDD72A73CA1328A6F6A11B /* MWQRCodeStep.swift */,
+				BD4EF496C64B9844A2BDE736 /* MWQRCodeStepViewController.swift */,
 			);
+			name = "QR Code Step";
 			path = "QR Code Step";
 			sourceTree = "<group>";
 		};
@@ -217,7 +223,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B18A49752577AA4F002F3FD4 /* (null) in Headers */,
+				B18A49752577AA4F002F3FD4 /* BuildFile in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF874DE6E4F349C3E277679C /* Localizable.strings in Resources */,
-				A3E9B00A54AB0FD0B1772832 /* Localizable.strings in Resources */,
+				6BF1E23642DE8E8BC7D37F40 /* Localizable.strings in Resources */,
+				1E8EB12B1DCE60A531F4BAF9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,24 +376,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3683867F28103CD700E1959C /* MWVideoCaptureCameraPreviewView.swift in Sources */,
-				3683867E28103CD700E1959C /* MWVideoRecordingView.swift in Sources */,
-				3683868328103CD700E1959C /* VideoCaptureError.swift in Sources */,
-				F04867F8CF94569E8CA90358 /* L10n.swift in Sources */,
-				7A916E3A83F2432C3A70C699 /* MWCameraPluginStruct.swift in Sources */,
-				A78A300C440A3FC753E82938 /* MWImageCaptureCameraPreviewView.swift in Sources */,
-				1502FA1B0A1A96E43B00F331 /* MWImageCaptureView.swift in Sources */,
-				3683867D28103CD700E1959C /* MWVideoCaptureInViewStep.swift in Sources */,
-				9267F8716E9C59885384642F /* MWImageCaptureViewController.swift in Sources */,
-				021FEA5DD8BDFB9C8C2D18E5 /* MWImageCaptureError.swift in Sources */,
-				AF8C186B40E7AB07491D4D3A /* MWImageCaptureStep.swift in Sources */,
-				08334259954FB5CD9C54A587 /* MWQRCodeStep.swift in Sources */,
-				8E468EC1E39D04D6E22E3337 /* MWQRCodeStepViewController.swift in Sources */,
-				3683867C28103CD700E1959C /* MWVideoCaptureInViewController.swift in Sources */,
-				3683868028103CD700E1959C /* MWVideoRecordingViewController.swift in Sources */,
-				3683868228103CD700E1959C /* MWVideoCaptureStep.swift in Sources */,
-				3683868728103D0B00E1959C /* QRCodeResult.swift in Sources */,
-				3683868128103CD700E1959C /* MWRecordButton.swift in Sources */,
+				A9B76657C7E2C1DA069C72C4 /* MWVideoCaptureInViewController.swift in Sources */,
+				72870C1947B6944561DB3D14 /* MWVideoCaptureInViewStep.swift in Sources */,
+				D744B0C5EB738EE0DFA0C63E /* MWVideoRecordingView.swift in Sources */,
+				ACCA01EF8D8302CDC45A7DA9 /* MWVideoCaptureCameraPreviewView.swift in Sources */,
+				7AB47F5395A8019FB56736CE /* MWVideoRecordingViewController.swift in Sources */,
+				3B51D3CADB67D3C324EBCAC2 /* MWRecordButton.swift in Sources */,
+				D6C624FCB87EA6C00850CE49 /* MWVideoCaptureStep.swift in Sources */,
+				013867F93D01C8777CCFC16D /* VideoCaptureError.swift in Sources */,
+				F0C564ED2FB264EC8E78A7DF /* L10n.swift in Sources */,
+				506BD9EEC1DAAA76FDEEF000 /* MWCameraPluginStruct.swift in Sources */,
+				ED27F8A0D2B9B595A263A084 /* MWImageCaptureCameraPreviewView.swift in Sources */,
+				B61A5BFD1F5F45D671C76052 /* MWImageCaptureView.swift in Sources */,
+				7E8DB4029C4A1487B3A35AC3 /* MWImageCaptureViewController.swift in Sources */,
+				1378458C082979093C5AEA48 /* MWImageCaptureError.swift in Sources */,
+				F01F3833B3DC9BF8F061EF17 /* MWImageCaptureStep.swift in Sources */,
+				09A66CBC304CF729BC0E66EF /* QRCodeResult.swift in Sources */,
+				B91E14847740248A2ED4255A /* MWQRCodeStep.swift in Sources */,
+				1AF5AFD611064F1BE0C2F957 /* MWQRCodeStepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,11 +416,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		43F39C9F94EAB52357FEAEB0 /* Localizable.strings */ = {
+		55DF417FCF00AB16DFCC8036 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C90D1219FC3C0028EB7B035 /* Localizable.strings */,
-				0E302B972D773D8ABF514A2F /* Localizable.strings */,
+				B4EEC55998E8F95E872C278B /* Localizable.strings */,
+				4242F0F18DA5B8F1C93E9D64 /* Localizable.strings */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -474,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -532,7 +538,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -557,7 +563,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MWCameraPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,7 +593,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MWCameraPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
