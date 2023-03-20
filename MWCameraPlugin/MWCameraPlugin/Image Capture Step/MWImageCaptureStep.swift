@@ -139,6 +139,6 @@ public extension StepMetadata {
         next: PushLinkMetadata? = nil,
         links: [LinkMetadata] = []
     ) -> CameraImageCaptureMetadata {
-        cameraImageCapture(id: id, title: title, devicePosition: devicePosition, imageQuality: imageQuality, imageURL: imageURL, optional: optional, showGalleryOption: showGalleryOption, next: next, links: links)
+        CameraImageCaptureMetadata(id: id, title: title, devicePosition: devicePosition, imageQuality: imageQuality, imageURL: imageURL, optional: optional, showGalleryOption: showGalleryOption, next: next, links: links)
     }
 }
