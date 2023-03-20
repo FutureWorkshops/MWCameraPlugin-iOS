@@ -117,4 +117,19 @@ public class CameraVideoCaptureMetadata: StepMetadata {
     }
 }
 
+public extension StepMetadata {
+    static func cameraVideoCapture(
+        id: String,
+        title: String,
+        deviceCamera: String,
+        audioMute: Bool? = nil,
+        duration: Float? = nil,
+        torchMode: String? = nil,
+        next: PushLinkMetadata? = nil,
+        links: [LinkMetadata] = []
+    ) -> CameraVideoCaptureMetadata {
+        CameraVideoCaptureMetadata(id: id, title: title, deviceCamera: deviceCamera, audioMute: audioMute, duration: duration, torchMode: torchMode, next: next, links: links)
+    }
+}
+
 
